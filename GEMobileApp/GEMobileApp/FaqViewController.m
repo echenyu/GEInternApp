@@ -1,18 +1,18 @@
 //
-//  FAQViewController.m
+//  FaqViewController.m
 //  GEMobileApp
 //
-//  Created by Eric Yu on 6/30/15.
+//  Created by Sumeet Ranu on 6/30/15.
 //  Copyright (c) 2015 EricYu. All rights reserved.
 //
 
-#import "FAQViewController.h"
+#import "FaqViewController.h"
 
-@interface FAQViewController ()
+@interface FaqViewController ()
 
 @end
 
-@implementation FAQViewController
+@implementation FaqViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
