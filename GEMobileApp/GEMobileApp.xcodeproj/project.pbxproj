@@ -17,6 +17,7 @@
 		075FEB391B42CA0100CB6D39 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB381B42CA0100CB6D39 /* OnboardingViewController.m */; };
 		075FEB3C1B42CA2500CB6D39 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB3B1B42CA2500CB6D39 /* MapViewController.m */; };
 		075FEB3F1B42CA9E00CB6D39 /* UserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */; };
+		474F499822E5BB4E35C17AC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC745AD700080EC20A7A15E /* libPods.a */; };
 		669794611B42D2120004468B /* FaqViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669794601B42D2120004468B /* FaqViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,9 @@
 		075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchViewController.m; sourceTree = "<group>"; };
 		6697945F1B42D2120004468B /* FaqViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaqViewController.h; sourceTree = "<group>"; };
 		669794601B42D2120004468B /* FaqViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaqViewController.m; sourceTree = "<group>"; };
+		83BF4A2A0943322DC3719564 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CEC745AD700080EC20A7A15E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F842511C027326676ADB3481 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				474F499822E5BB4E35C17AC7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,8 @@
 				075FEB0D1B42BD6800CB6D39 /* GEMobileApp */,
 				075FEB271B42BD6900CB6D39 /* GEMobileAppTests */,
 				075FEB0C1B42BD6800CB6D39 /* Products */,
+				2F058E0679D6E886A02D5492 /* Pods */,
+				20C1D8AF1752EB809B181E0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +146,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		20C1D8AF1752EB809B181E0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEC745AD700080EC20A7A15E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F058E0679D6E886A02D5492 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83BF4A2A0943322DC3719564 /* Pods.debug.xcconfig */,
+				F842511C027326676ADB3481 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 075FEB2E1B42BD6900CB6D39 /* Build configuration list for PBXNativeTarget "GEMobileApp" */;
 			buildPhases = (
+				E3916DA5226F7372040A886A /* Check Pods Manifest.lock */,
 				075FEB071B42BD6800CB6D39 /* Sources */,
 				075FEB081B42BD6800CB6D39 /* Frameworks */,
 				075FEB091B42BD6800CB6D39 /* Resources */,
+				BDFFEA108CB70AC1D426EECC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +259,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BDFFEA108CB70AC1D426EECC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3916DA5226F7372040A886A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		075FEB071B42BD6800CB6D39 /* Sources */ = {
@@ -369,6 +428,7 @@
 		};
 		075FEB2F1B42BD6900CB6D39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83BF4A2A0943322DC3719564 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GEMobileApp/Info.plist;
@@ -380,6 +440,7 @@
 		};
 		075FEB301B42BD6900CB6D39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F842511C027326676ADB3481 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GEMobileApp/Info.plist;
