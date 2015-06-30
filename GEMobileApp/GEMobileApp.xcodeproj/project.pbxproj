@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		075FEB111B42BD6800CB6D39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB101B42BD6800CB6D39 /* main.m */; };
+		075FEB141B42BD6800CB6D39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB131B42BD6800CB6D39 /* AppDelegate.m */; };
+		075FEB171B42BD6800CB6D39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB161B42BD6800CB6D39 /* ViewController.m */; };
+		075FEB1A1B42BD6800CB6D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075FEB181B42BD6800CB6D39 /* Main.storyboard */; };
+		075FEB1C1B42BD6800CB6D39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075FEB1B1B42BD6800CB6D39 /* Images.xcassets */; };
+		075FEB1F1B42BD6800CB6D39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075FEB1D1B42BD6800CB6D39 /* LaunchScreen.xib */; };
+		075FEB2B1B42BD6900CB6D39 /* GEMobileAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB2A1B42BD6900CB6D39 /* GEMobileAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		075FEB251B42BD6900CB6D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 075FEB031B42BD6800CB6D39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 075FEB0A1B42BD6800CB6D39;
+			remoteInfo = GEMobileApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		075FEB0B1B42BD6800CB6D39 /* GEMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		075FEB0F1B42BD6800CB6D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		075FEB101B42BD6800CB6D39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		075FEB121B42BD6800CB6D39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		075FEB131B42BD6800CB6D39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		075FEB151B42BD6800CB6D39 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		075FEB161B42BD6800CB6D39 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		075FEB191B42BD6800CB6D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		075FEB1B1B42BD6800CB6D39 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		075FEB1E1B42BD6800CB6D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		075FEB241B42BD6900CB6D39 /* GEMobileAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEMobileAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		075FEB291B42BD6900CB6D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		075FEB2A1B42BD6900CB6D39 /* GEMobileAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GEMobileAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		075FEB081B42BD6800CB6D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075FEB211B42BD6900CB6D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		075FEB021B42BD6800CB6D39 = {
+			isa = PBXGroup;
+			children = (
+				075FEB0D1B42BD6800CB6D39 /* GEMobileApp */,
+				075FEB271B42BD6900CB6D39 /* GEMobileAppTests */,
+				075FEB0C1B42BD6800CB6D39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		075FEB0C1B42BD6800CB6D39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				075FEB0B1B42BD6800CB6D39 /* GEMobileApp.app */,
+				075FEB241B42BD6900CB6D39 /* GEMobileAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		075FEB0D1B42BD6800CB6D39 /* GEMobileApp */ = {
+			isa = PBXGroup;
+			children = (
+				075FEB121B42BD6800CB6D39 /* AppDelegate.h */,
+				075FEB131B42BD6800CB6D39 /* AppDelegate.m */,
+				075FEB151B42BD6800CB6D39 /* ViewController.h */,
+				075FEB161B42BD6800CB6D39 /* ViewController.m */,
+				075FEB181B42BD6800CB6D39 /* Main.storyboard */,
+				075FEB1B1B42BD6800CB6D39 /* Images.xcassets */,
+				075FEB1D1B42BD6800CB6D39 /* LaunchScreen.xib */,
+				075FEB0E1B42BD6800CB6D39 /* Supporting Files */,
+			);
+			path = GEMobileApp;
+			sourceTree = "<group>";
+		};
+		075FEB0E1B42BD6800CB6D39 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				075FEB0F1B42BD6800CB6D39 /* Info.plist */,
+				075FEB101B42BD6800CB6D39 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		075FEB271B42BD6900CB6D39 /* GEMobileAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				075FEB2A1B42BD6900CB6D39 /* GEMobileAppTests.m */,
+				075FEB281B42BD6900CB6D39 /* Supporting Files */,
+			);
+			path = GEMobileAppTests;
+			sourceTree = "<group>";
+		};
+		075FEB281B42BD6900CB6D39 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				075FEB291B42BD6900CB6D39 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		075FEB0A1B42BD6800CB6D39 /* GEMobileApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 075FEB2E1B42BD6900CB6D39 /* Build configuration list for PBXNativeTarget "GEMobileApp" */;
+			buildPhases = (
+				075FEB071B42BD6800CB6D39 /* Sources */,
+				075FEB081B42BD6800CB6D39 /* Frameworks */,
+				075FEB091B42BD6800CB6D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GEMobileApp;
+			productName = GEMobileApp;
+			productReference = 075FEB0B1B42BD6800CB6D39 /* GEMobileApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		075FEB231B42BD6900CB6D39 /* GEMobileAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 075FEB311B42BD6900CB6D39 /* Build configuration list for PBXNativeTarget "GEMobileAppTests" */;
+			buildPhases = (
+				075FEB201B42BD6900CB6D39 /* Sources */,
+				075FEB211B42BD6900CB6D39 /* Frameworks */,
+				075FEB221B42BD6900CB6D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				075FEB261B42BD6900CB6D39 /* PBXTargetDependency */,
+			);
+			name = GEMobileAppTests;
+			productName = GEMobileAppTests;
+			productReference = 075FEB241B42BD6900CB6D39 /* GEMobileAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		075FEB031B42BD6800CB6D39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = EricYu;
+				TargetAttributes = {
+					075FEB0A1B42BD6800CB6D39 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					075FEB231B42BD6900CB6D39 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 075FEB0A1B42BD6800CB6D39;
+					};
+				};
+			};
+			buildConfigurationList = 075FEB061B42BD6800CB6D39 /* Build configuration list for PBXProject "GEMobileApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 075FEB021B42BD6800CB6D39;
+			productRefGroup = 075FEB0C1B42BD6800CB6D39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				075FEB0A1B42BD6800CB6D39 /* GEMobileApp */,
+				075FEB231B42BD6900CB6D39 /* GEMobileAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		075FEB091B42BD6800CB6D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075FEB1A1B42BD6800CB6D39 /* Main.storyboard in Resources */,
+				075FEB1F1B42BD6800CB6D39 /* LaunchScreen.xib in Resources */,
+				075FEB1C1B42BD6800CB6D39 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075FEB221B42BD6900CB6D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		075FEB071B42BD6800CB6D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075FEB171B42BD6800CB6D39 /* ViewController.m in Sources */,
+				075FEB141B42BD6800CB6D39 /* AppDelegate.m in Sources */,
+				075FEB111B42BD6800CB6D39 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075FEB201B42BD6900CB6D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075FEB2B1B42BD6900CB6D39 /* GEMobileAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		075FEB261B42BD6900CB6D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 075FEB0A1B42BD6800CB6D39 /* GEMobileApp */;
+			targetProxy = 075FEB251B42BD6900CB6D39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		075FEB181B42BD6800CB6D39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				075FEB191B42BD6800CB6D39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		075FEB1D1B42BD6800CB6D39 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				075FEB1E1B42BD6800CB6D39 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		075FEB2C1B42BD6900CB6D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		075FEB2D1B42BD6900CB6D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		075FEB2F1B42BD6900CB6D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GEMobileApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		075FEB301B42BD6900CB6D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GEMobileApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		075FEB321B42BD6900CB6D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GEMobileAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEMobileApp.app/GEMobileApp";
+			};
+			name = Debug;
+		};
+		075FEB331B42BD6900CB6D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GEMobileAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEMobileApp.app/GEMobileApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		075FEB061B42BD6800CB6D39 /* Build configuration list for PBXProject "GEMobileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				075FEB2C1B42BD6900CB6D39 /* Debug */,
+				075FEB2D1B42BD6900CB6D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		075FEB2E1B42BD6900CB6D39 /* Build configuration list for PBXNativeTarget "GEMobileApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				075FEB2F1B42BD6900CB6D39 /* Debug */,
+				075FEB301B42BD6900CB6D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		075FEB311B42BD6900CB6D39 /* Build configuration list for PBXNativeTarget "GEMobileAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				075FEB321B42BD6900CB6D39 /* Debug */,
+				075FEB331B42BD6900CB6D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 075FEB031B42BD6800CB6D39 /* Project object */;
+}
