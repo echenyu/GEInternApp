@@ -14,6 +14,10 @@
 		075FEB1C1B42BD6800CB6D39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075FEB1B1B42BD6800CB6D39 /* Images.xcassets */; };
 		075FEB1F1B42BD6800CB6D39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075FEB1D1B42BD6800CB6D39 /* LaunchScreen.xib */; };
 		075FEB2B1B42BD6900CB6D39 /* GEMobileAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB2A1B42BD6900CB6D39 /* GEMobileAppTests.m */; };
+		075FEB361B42C96800CB6D39 /* FAQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB351B42C96800CB6D39 /* FAQViewController.m */; };
+		075FEB391B42CA0100CB6D39 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB381B42CA0100CB6D39 /* OnboardingViewController.m */; };
+		075FEB3C1B42CA2500CB6D39 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB3B1B42CA2500CB6D39 /* MapViewController.m */; };
+		075FEB3F1B42CA9E00CB6D39 /* UserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		075FEB241B42BD6900CB6D39 /* GEMobileAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEMobileAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		075FEB291B42BD6900CB6D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		075FEB2A1B42BD6900CB6D39 /* GEMobileAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GEMobileAppTests.m; sourceTree = "<group>"; };
+		075FEB341B42C96800CB6D39 /* FAQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAQViewController.h; sourceTree = "<group>"; };
+		075FEB351B42C96800CB6D39 /* FAQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAQViewController.m; sourceTree = "<group>"; };
+		075FEB371B42CA0100CB6D39 /* OnboardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnboardingViewController.h; sourceTree = "<group>"; };
+		075FEB381B42CA0100CB6D39 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
+		075FEB3A1B42CA2500CB6D39 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		075FEB3B1B42CA2500CB6D39 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		075FEB3D1B42CA9E00CB6D39 /* UserSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchViewController.h; sourceTree = "<group>"; };
+		075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,14 @@
 				075FEB151B42BD6800CB6D39 /* ViewController.h */,
 				075FEB161B42BD6800CB6D39 /* ViewController.m */,
 				075FEB181B42BD6800CB6D39 /* Main.storyboard */,
+				075FEB3D1B42CA9E00CB6D39 /* UserSearchViewController.h */,
+				075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */,
+				075FEB3A1B42CA2500CB6D39 /* MapViewController.h */,
+				075FEB3B1B42CA2500CB6D39 /* MapViewController.m */,
+				075FEB371B42CA0100CB6D39 /* OnboardingViewController.h */,
+				075FEB381B42CA0100CB6D39 /* OnboardingViewController.m */,
+				075FEB341B42C96800CB6D39 /* FAQViewController.h */,
+				075FEB351B42C96800CB6D39 /* FAQViewController.m */,
 				075FEB1B1B42BD6800CB6D39 /* Images.xcassets */,
 				075FEB1D1B42BD6800CB6D39 /* LaunchScreen.xib */,
 				075FEB0E1B42BD6800CB6D39 /* Supporting Files */,
@@ -220,7 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				075FEB171B42BD6800CB6D39 /* ViewController.m in Sources */,
+				075FEB361B42C96800CB6D39 /* FAQViewController.m in Sources */,
 				075FEB141B42BD6800CB6D39 /* AppDelegate.m in Sources */,
+				075FEB3C1B42CA2500CB6D39 /* MapViewController.m in Sources */,
+				075FEB3F1B42CA9E00CB6D39 /* UserSearchViewController.m in Sources */,
+				075FEB391B42CA0100CB6D39 /* OnboardingViewController.m in Sources */,
 				075FEB111B42BD6800CB6D39 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

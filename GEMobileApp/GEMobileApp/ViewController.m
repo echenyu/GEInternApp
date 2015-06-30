@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self Number:@3 withPower:@4];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,4 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSString *) Number:(NSNumber*)numb withPower:(NSNumber*)numb2 {
+    return @"hello";
+}
 @end
