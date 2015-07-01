@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E9FC80D3-2358-48CD-A2FF-18BC60535D1C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>GEMobileApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5D1C01FE6CCBF717D3712A02D7408202763159FC</key>
 		<string>https://github.com/GEDevelopers/iOSApp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GEMobileApp/GEMobileApp.xcodeproj/project.xcworkspace</string>
+	<string>GEMobileApp/GEMobileApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5D1C01FE6CCBF717D3712A02D7408202763159FC</key>
