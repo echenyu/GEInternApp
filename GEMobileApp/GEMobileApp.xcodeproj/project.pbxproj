@@ -17,6 +17,7 @@
 		075FEB391B42CA0100CB6D39 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB381B42CA0100CB6D39 /* OnboardingViewController.m */; };
 		075FEB3C1B42CA2500CB6D39 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB3B1B42CA2500CB6D39 /* MapViewController.m */; };
 		075FEB3F1B42CA9E00CB6D39 /* UserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */; };
+		07D6F54B1B4C66A000D649E0 /* MapTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D6F54A1B4C66A000D649E0 /* MapTableViewController.m */; };
 		474F499822E5BB4E35C17AC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC745AD700080EC20A7A15E /* libPods.a */; };
 		669794611B42D2120004468B /* FaqViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669794601B42D2120004468B /* FaqViewController.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,8 @@
 		075FEB3B1B42CA2500CB6D39 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		075FEB3D1B42CA9E00CB6D39 /* UserSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchViewController.h; sourceTree = "<group>"; };
 		075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchViewController.m; sourceTree = "<group>"; };
+		07D6F5491B4C66A000D649E0 /* MapTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewController.h; sourceTree = "<group>"; };
+		07D6F54A1B4C66A000D649E0 /* MapTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewController.m; sourceTree = "<group>"; };
 		6697945F1B42D2120004468B /* FaqViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaqViewController.h; sourceTree = "<group>"; };
 		669794601B42D2120004468B /* FaqViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaqViewController.m; sourceTree = "<group>"; };
 		83BF4A2A0943322DC3719564 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				075FEB151B42BD6800CB6D39 /* ViewController.h */,
 				075FEB161B42BD6800CB6D39 /* ViewController.m */,
 				075FEB181B42BD6800CB6D39 /* Main.storyboard */,
+				07D6F5491B4C66A000D649E0 /* MapTableViewController.h */,
+				07D6F54A1B4C66A000D649E0 /* MapTableViewController.m */,
 				075FEB3D1B42CA9E00CB6D39 /* UserSearchViewController.h */,
 				075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */,
 				075FEB3A1B42CA2500CB6D39 /* MapViewController.h */,
@@ -298,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D6F54B1B4C66A000D649E0 /* MapTableViewController.m in Sources */,
 				075FEB171B42BD6800CB6D39 /* ViewController.m in Sources */,
 				075FEB141B42BD6800CB6D39 /* AppDelegate.m in Sources */,
 				075FEB3C1B42CA2500CB6D39 /* MapViewController.m in Sources */,
