@@ -40,7 +40,10 @@
     }
     
     [user setObject:self.name.text forKey:@"name"];
+
+    //This makes the username case insensitive
     NSString *lowerCaseUser = [self.email.text lowercaseString];
+    
     user.username = lowerCaseUser;
     user.password = self.password.text;
     user.email = self.email.text;

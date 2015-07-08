@@ -207,6 +207,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G7L-9q-KqO">
+                                <rect key="frame" x="107" y="177" width="160" height="160"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eD-b5-YAp">
+                                <rect key="frame" x="119" y="345" width="137" height="30"/>
+                                <state key="normal" title="Upload New Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadPic:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="f8v-A5-yZy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -214,11 +226,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="profileName" destination="bOU-GF-f62" id="gju-US-HD4"/>
+                        <outlet property="profilePic" destination="G7L-9q-KqO" id="cZY-Q6-Ley"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2513" y="293"/>
+            <point key="canvasLocation" x="2512.5" y="292.5"/>
         </scene>
         <!--Faq View Controller-->
         <scene sceneID="e5a-CP-wCb">

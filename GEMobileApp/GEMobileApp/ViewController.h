@@ -11,5 +11,6 @@
 @interface ViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UILabel *profileName;
+@property (nonatomic, strong) IBOutlet UIImageView *profilePic;
 @end
 

@@ -30,6 +30,9 @@
 -(void) setup {
     PFUser *user = [PFUser currentUser];
     self.profileName.text = [user objectForKey:@"name"];
+    UIImage *image = [UIImage imageNamed:@"nopic.gif"];
+    self.profilePic.image = image;
+    
     
 }
 
@@ -39,6 +42,14 @@
     navigationVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:navigationVC animated:YES completion:nil];
     
+    
+}
+
+-(IBAction)uploadPic:(id)sender {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
+    [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:nil];
     
 }
 @end
