@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+
 @import GoogleMaps;
 
 @interface AppDelegate ()
@@ -19,7 +21,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [GMSServices provideAPIKey:@"AIzaSyD5ozwHlFKROIb0eKU4lV-tJvhdkUy9dPI"];
+    [Parse setApplicationId:@"ctvsaP9fdLmpgi5OlE7qJf4Zu1zh5lThoCWooSyi"
+                  clientKey:@"GJM1loSMOB9NF6ZLkMiC4YlIjONLnQ4LKNOihuNf"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    if(![PFUser currentUser]) {
+        [self showLoginScreen:NO];
+    }
     return YES;
+}
+
+-(void) showLoginScreen:(BOOL)animated
+{
+    
+    // Get login screen from storyboard and present it
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UINavigationController *viewController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"login"];
+    [self.window makeKeyAndVisible];
+    [self.window.rootViewController presentViewController:viewController
+                                                 animated:animated
+                                               completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

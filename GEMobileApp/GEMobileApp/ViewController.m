@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Parse/Parse.h"
+#import "loginViewController.h"
 
 @interface ViewController ()
 
@@ -16,8 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self Number:@3 withPower:@4];
-    
+    [self setup];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,7 +27,18 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSString *) Number:(NSNumber*)numb withPower:(NSNumber*)numb2 {
-    return @"hello";
+-(void) setup {
+    PFUser *user = [PFUser currentUser];
+    self.profileName.text = [user objectForKey:@"name"];
+    
+}
+
+-(IBAction)logout:(id)sender {
+    [PFUser logOut];
+    UINavigationController *navigationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
+    navigationVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:navigationVC animated:YES completion:nil];
+    
+    
 }
 @end
