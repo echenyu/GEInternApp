@@ -11,10 +11,10 @@
 #import "loginViewController.h"
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,8 +34,16 @@
     PFUser *user = [PFUser currentUser];
     self.profileName.text = [user objectForKey:@"name"];
     UIImage *image = [UIImage imageNamed:@"nopic.gif"];
-    self.profilePic.image = image;
-    
+    if(![[PFUser currentUser]objectForKey:@"profilePicture"]) {
+        self.profilePic.image = image;
+    } else {
+        [user[@"profilePicture"]getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if(!error) {
+                self.profilePic.image = [UIImage imageWithData:data];
+            }
+        }];
+    }
+    NSLog(@"%@", self.profilePic.image);
     
 }
 
@@ -62,9 +70,18 @@
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
+    [picker dismissViewControllerAnimated:YES completion:nil];
     // Get the image from the result
     UIImage* image = [info valueForKey:@"UIImagePickerControllerOriginalImage"];
+    NSData *profPicData = UIImagePNGRepresentation(image);
+    PFFile *profPicFile = [PFFile fileWithData:profPicData];
+    
+    [profPicFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        PFUser *user = [PFUser currentUser];
+        [user setObject:profPicFile forKey:@"profilePicture"];
+        [user saveInBackground];
+        
+    }];
     
     self.profilePic.image = image;
 }
