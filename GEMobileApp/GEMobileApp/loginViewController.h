@@ -10,6 +10,8 @@
 
 @interface loginViewController : UIViewController
 
+//Outlets connected to the UITextFields for the username and
+//password
 @property (nonatomic, weak) IBOutlet UITextField *username;
 @property (nonatomic, weak) IBOutlet UITextField *password;
 @end

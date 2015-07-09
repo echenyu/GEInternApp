@@ -9,6 +9,7 @@
 #import "loginViewController.h"
 #import <Parse/Parse.h>
 
+//Member variable for a user that was logged in.
 @interface loginViewController () {
     PFUser *successfulUser;
 }
@@ -28,6 +29,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Action for the login button. It checks the database to see
+//if the user can log in or not. When login works, then the
+//next screen will be presented. The segue transition is a
+//horizontal flip
 -(IBAction)login:(id)sender {
     
     
@@ -48,6 +53,7 @@
 }
 
 
+//If the User + Pass doesn't work, an alert needs to be shown
 -(void) userCredentialsWrong {
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"ERROR" message:@"Username or password combination wrong" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [alert show];
