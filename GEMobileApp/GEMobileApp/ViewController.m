@@ -31,8 +31,17 @@
 //1. Sets up the profileName by picking the attribute "name"
 //2. Sets up the picture (this function needs to be read a few times.
 -(void) setup {
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
+                                                                           green:93.0f/255.0f
+                                                                            blue:174.0f/255.0f
+                                                                           alpha:1.0f];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
     PFUser *user = [PFUser currentUser];
-    self.profileName.text = [user objectForKey:@"name"];
+    NSString *firstName = [user objectForKey:@"firstName"];
+    NSString *lastName = [user objectForKey:@"lastName"];
+    NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@" %@", lastName]];
+    self.profileName.text = fullName;
     UIImage *image = [UIImage imageNamed:@"nopic.gif"];
     if(![[PFUser currentUser]objectForKey:@"profilePicture"]) {
         self.profilePic.image = image;

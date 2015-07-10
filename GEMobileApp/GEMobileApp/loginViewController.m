@@ -18,9 +18,11 @@
 
 @implementation loginViewController
 
+//Set navigation bar color
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setup];
+        // Do any additional setup after loading the view.
     
 }
 
@@ -29,6 +31,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setup {
+    self.view.backgroundColor = [UIColor blackColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
+                                                                           green:93.0f/255.0f
+                                                                            blue:174.0f/255.0f
+                                                                           alpha:1.0f];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    
+    [self.createNew setTintColor:[UIColor whiteColor]];
+    [self.login setTintColor: [UIColor whiteColor]];
+    self.emailLabel.textColor = [UIColor whiteColor];
+    self.passwordLabel.textColor = [UIColor whiteColor];
+    self.catchPhrase.textColor = [UIColor whiteColor];
+    self.geLogo.image = [UIImage imageNamed:@"gelogo.png"];
+
+}
 //Action for the login button. It checks the database to see
 //if the user can log in or not. When login works, then the
 //next screen will be presented. The segue transition is a

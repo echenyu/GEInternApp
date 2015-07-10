@@ -17,13 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:NO];
     // Do any additional setup after loading the view.
+    [self setup];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setup {
+    [self.view setBackgroundColor:[UIColor blackColor]];
+    self.geLogo.image = [UIImage imageNamed:@"gelogo.png"];
+    self.firstNameLabel.textColor = [UIColor whiteColor];
+    self.lastNameLabel.textColor = [UIColor whiteColor];
+    self.emailLabel.textColor = [UIColor whiteColor];
+    self.passwordLabel.textColor = [UIColor whiteColor];
+    self.passwordConfirmLabel.textColor = [UIColor whiteColor];
+    self.signUpButton.backgroundColor = [UIColor colorWithRed:58.0f/255.0f
+                                                        green:93.0f/255.0f
+                                                         blue:174.0f/255.0f
+                                                        alpha:1.0f];
+    self.signUpButton.tintColor = [UIColor whiteColor];
+    
 }
 
 //This is where the logic is made for actually creating a new user within parse.

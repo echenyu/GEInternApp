@@ -14,4 +14,10 @@
 //password
 @property (nonatomic, weak) IBOutlet UITextField *username;
 @property (nonatomic, weak) IBOutlet UITextField *password;
+@property (nonatomic, weak) IBOutlet UIButton *login;
+@property (nonatomic, weak) IBOutlet UIButton *createNew;
+@property (nonatomic, weak) IBOutlet UILabel *emailLabel;
+@property (nonatomic, weak) IBOutlet UILabel *passwordLabel;
+@property (nonatomic, weak) IBOutlet UILabel *catchPhrase;
+@property (nonatomic, weak) IBOutlet UIImageView *geLogo;
 @end
