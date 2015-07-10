@@ -26,6 +26,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+//This is where the logic is made for actually creating a new user within parse.
+//This function is called after the user clicks "Submit" to create new account.
+//1. We setup a new PFUser that we call user.
+//2. Do some error checking to make sure that email/password length/more are met.
+//3. Set an extra attribute for the name
+//4. Set the user.username, user.password, and user.email to the values that are specified.
+//5. Sign up the user into Parse! The function is predefined in Parse Documentation.
+//6. If everything works, then the viewcontroller will segue to the main page!
+//   If things don't work, then there will be an alert that gets shown!
 -(IBAction)createUser:(id)sender {
     PFUser *user = [PFUser user];
     if(!self.email.text) {
@@ -39,7 +48,8 @@
         return;
     }
     
-    [user setObject:self.name.text forKey:@"name"];
+    [user setObject:self.firstName.text forKey:@"firstName"];
+    [user setObject:self.lastName.text forKey:@"lastName"];
 
     //This makes the username case insensitive
     NSString *lowerCaseUser = [self.email.text lowercaseString];
@@ -58,7 +68,7 @@
         } else {
             NSString *errorString = [error userInfo][@"error"];
             // Show the errorString somewhere and let the user try again.
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"ERROR" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Signup Failed" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
             
         }

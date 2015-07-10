@@ -10,9 +10,10 @@
 
 @interface newUserViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UITextField *name;
+@property (nonatomic, weak) IBOutlet UITextField *firstName;
+@property (nonatomic, weak) IBOutlet UITextField *lastName; 
 @property (nonatomic, weak) IBOutlet UITextField *email;
 @property (nonatomic, weak) IBOutlet UITextField *password;
-
+@property (nonatomic, weak) IBOutlet UITextField *passwordConfirm;
 
 @end

@@ -17,7 +17,8 @@
 
 @implementation AppDelegate
 
-
+//A lot of stuff is done here to setup the various SDK's and APIs that we're using for this application
+//ALso checks to see if a PFUser is currently logged in. If so, we don't need to send them to the login screen. 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [GMSServices provideAPIKey:@"AIzaSyD5ozwHlFKROIb0eKU4lV-tJvhdkUy9dPI"];

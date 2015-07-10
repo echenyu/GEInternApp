@@ -20,9 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // for scroll view
-    /*UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds ;
-    [self.view addSubview:scrollView];
-    [scrollView setContentSize:CGSizeMake(scrollView.bounds.size.width, scrollView.bounds.size.height*3)];*/
     [self setup];
     
 }

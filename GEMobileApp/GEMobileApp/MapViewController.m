@@ -16,6 +16,7 @@
 
 @implementation MapViewController
 
+//This is just to allocate memory for the googlemap property that we have from above.
 -(GMSMapView *)googleMap{
     if(!_googleMap) {
         _googleMap = [[GMSMapView alloc]init];
@@ -34,6 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+//This is our setup function that is called right as the view loads.
+//We set the CameraPostion, marker, and map to the specified
+//values. (These values are subject to change depending on the
+//row clicked in the mapTableViewController!
 -(void)setup {
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.

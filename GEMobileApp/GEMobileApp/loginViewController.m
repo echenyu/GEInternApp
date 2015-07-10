@@ -32,7 +32,7 @@
 //Action for the login button. It checks the database to see
 //if the user can log in or not. When login works, then the
 //next screen will be presented. The segue transition is a
-//horizontal flip
+//horizontal flip.
 -(IBAction)login:(id)sender {
     
     
@@ -46,16 +46,17 @@
             self.password.text = @"";
         }
         else {
-            [self userCredentialsWrong];
+            [self userCredentialsWrong: error];
         }
     }];
 
 }
 
 
-//If the User + Pass doesn't work, an alert needs to be shown
--(void) userCredentialsWrong {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"ERROR" message:@"Username or password combination wrong" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+//If the User + Pass doesn't work, an alert needs to be shown.
+//This function is called from the IBAction from above
+-(void) userCredentialsWrong: (NSError*) error {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Login Failed" message: error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     [alert show];
     NSLog(@"WRONG");
 }

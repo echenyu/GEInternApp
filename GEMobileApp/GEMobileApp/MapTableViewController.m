@@ -14,6 +14,8 @@
 
 @implementation MapTableViewController
 
+//Currently, everytime the view is loaded, we make an array that gets the location items added.
+//The information added in the array could probably be done in a separate function/file... will research into that.
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -37,12 +39,15 @@
 
 #pragma mark - Table view data source
 
+//This are the functions that need to be implemented when something is a UITableViewController.
+//Delegate functions. We only need 1 section to be returned.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
+//We need to return the number of items that the array has!
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
@@ -50,12 +55,13 @@
 }
 
 
+//This configures the cells in the table view.
+//indexPath is the variable that helps us recognize which cell we are referring to! 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     // Configure the cell...
-    NSString *locationName = [[self items ]objectAtIndex:indexPath.row];
+    NSString *locationName = [[self items]objectAtIndex:indexPath.row];
     [[cell textLabel] setText:locationName];
     
     return cell;
