@@ -34,11 +34,10 @@
 -(void)setup {
     self.view.backgroundColor = [UIColor blackColor];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
-                                                                           green:93.0f/255.0f
-                                                                            blue:174.0f/255.0f
-                                                                           alpha:1.0f];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    
+                                                                                    green:93.0f/255.0f
+                                                                                     blue:174.0f/255.0f
+                                                                                    alpha:1.0f];    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     [self.createNew setTintColor:[UIColor whiteColor]];
     [self.login setTintColor: [UIColor whiteColor]];
@@ -46,7 +45,7 @@
     self.passwordLabel.textColor = [UIColor whiteColor];
     self.catchPhrase.textColor = [UIColor whiteColor];
     self.geLogo.image = [UIImage imageNamed:@"gelogo.png"];
-
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName]];
 }
 //Action for the login button. It checks the database to see
 //if the user can log in or not. When login works, then the

@@ -31,6 +31,7 @@
 //1. Sets up the profileName by picking the attribute "name"
 //2. Sets up the picture (this function needs to be read a few times.
 -(void) setup {
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
                                                                            green:93.0f/255.0f
                                                                             blue:174.0f/255.0f
@@ -52,13 +53,14 @@
             }
         }];
     }
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
     
     
 }
 
 //If a user clicks log out, then the application
 //will sign out the PFUser and open a viewController named "login"
--(IBAction)logout:(id)sender {
+-(void)logout {
     [PFUser logOut];
     UINavigationController *navigationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
     navigationVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
