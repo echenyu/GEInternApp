@@ -55,6 +55,9 @@
     }
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
     
+    //These two calls will make the profile picture a rounde circle instead of a square.
+    self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
+    self.profilePic.clipsToBounds = YES;
     
 }
 
