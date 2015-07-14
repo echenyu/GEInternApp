@@ -26,6 +26,12 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
+                                                                           green:93.0f/255.0f
+                                                                            blue:174.0f/255.0f
+                                                                           alpha:1.0f];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 

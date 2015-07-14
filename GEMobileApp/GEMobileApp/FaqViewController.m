@@ -30,6 +30,12 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
+                                                                           green:93.0f/255.0f
+                                                                            blue:174.0f/255.0f
+                                                                           alpha:1.0f];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self setup];
     
 }
@@ -40,6 +46,7 @@
 }
 
 -(void)setup {
+    
     [self.faqTextView setScrollEnabled:YES];
     [self.faqTextView setText:@"FREQUENTLY ASKED QUESTIONS \n\n1. If my drive is less than 400 miles one way, can I still get reimbursed for mileage? \n\n Yes, you need to note the miles on the T&L form and include the MapQuest map. \n\n2. Can I fly to my work location, buy a car, then drive home and get mileage reimbursement? \n\nYou must get approval from Kim Demko PRIOR to this situation. You must also then provide proof of registration and sale/purchase receipt for the automobile that is in your name.  Mileage would be reimbursed AFTER your return trip home once you provide all fuel receipts. \n\n3. Can I take the Auto Train and still claim mileage the whole distance and/or the auto train reimbursement? \n\nAuto Trains are not reimbursed at any time. We do not reimburse for shipment of automobiles.\n\n4. Can I purchase a one way airline ticket to my worksite and then purchase another one way ticket later in my rotation since I don't have an end date? \n\nAll end date choices are on the Co-op/Intern Site, please choose one prior to making your round trip airfare purchase. \n\n5. Can I get $35.00 a day for meals even if I only purchased $20.00 in meals? \n\nNo, it is not a per diem, it is the max we allow for daily meals. \n\n6. Can I provide a credit card billing statement for fuel, food or hotel receipts? \n\nNo, it must be a copy of the itemized receipt(s) that show the item, date and city of purchase. \n\n7. Can I get reimbursed in advance for my baggage fees, hotels or tolls for my return trip? \n\nNo, we must have paid receipts for those items. \n\n8. If my friend or family member drives with me to my worksite, can I get reimbursed for their meal/hotel costs?  \n\nNo, GE only reimburses items that the employee incurs. \n\n9. Can I submit a T&L form for reimbursement if it is more than 2 weeks past my end date? \n\nNo, due to accounting practices, we are not able to process 2 weeks past your end date.\n\n10. If for any reason I have to leave my rotation sooner than the expected end date, do I still get to keep the full T&L reimbursement? \n\nNo, it will be pro-rated for the actual weeks that you were working.  Payroll would send you an overpayment letter for the recoupment of funds.\n\n11. If I am unsure IF an item can be reimbursed, what should I do? \n\nPRIOR to making any travel reservations or actually traveling, you must email the T&L mailbox at Aviation.CoopTLforms@ge.com to get approval. Please remember to keep a copy of the Guidelines, FAQ’s and the T&L form for future use once you return home/school. Anything not included in the above guidelines and/or FAQ’s, will not be reimbursed without PRIOR APPROVAL from the Always remember, if you willingly provide false information, it is in direct violation of the GE Integrity Policy and you are placing your internship and/or future positions with GE Aviation in jeopardy. "
      
