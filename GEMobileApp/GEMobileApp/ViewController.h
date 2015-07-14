@@ -10,6 +10,9 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UILabel *profileName;
+@property (nonatomic, weak) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end
 
