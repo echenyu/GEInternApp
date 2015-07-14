@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Parse/Parse.h"
 #import "loginViewController.h"
+#import "SWRevealViewController.h"
+
 
 @interface ViewController ()
 @end
@@ -18,7 +20,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
     [self setup];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -31,6 +42,7 @@
 //1. Sets up the profileName by picking the attribute "name"
 //2. Sets up the picture (this function needs to be read a few times.
 -(void) setup {
+    
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
                                                                            green:93.0f/255.0f

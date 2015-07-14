@@ -7,6 +7,8 @@
 //
 
 #import "UserSearchViewController.h"
+#import "SWRevealViewController.h"
+
 
 @interface UserSearchViewController ()
 
@@ -16,6 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
     // Do any additional setup after loading the view.
 }
 

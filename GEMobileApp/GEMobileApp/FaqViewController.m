@@ -7,6 +7,8 @@
 //
 
 #import "FaqViewController.h"
+#import "SWRevealViewController.h"
+
 
 @interface FaqViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *faqTextView;
@@ -20,6 +22,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // for scroll view
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
     [self setup];
     
 }

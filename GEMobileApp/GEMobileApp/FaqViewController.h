@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FaqViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
 
 @end

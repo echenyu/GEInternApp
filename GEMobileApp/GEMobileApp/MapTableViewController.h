@@ -11,5 +11,7 @@
 @interface MapTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *items;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
 
 @end

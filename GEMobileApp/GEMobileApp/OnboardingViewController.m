@@ -7,6 +7,8 @@
 //
 
 #import "OnboardingViewController.h"
+#import "SWRevealViewController.h"
+
 
 @interface OnboardingViewController ()
 
@@ -28,6 +30,15 @@
     label.text = @"Testing for scroll stuff";
     
     [scroll addSubview:label];*/
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+
 
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10, 64 + 10, 375-10, 40)];
     title.text = @"Onboarding";
