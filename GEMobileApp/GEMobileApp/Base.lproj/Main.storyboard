@@ -190,7 +190,7 @@
             </objects>
             <point key="canvasLocation" x="918.5" y="137.5"/>
         </scene>
-        <!--Profile-->
+        <!--Your Profile-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -229,7 +229,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="jBi-Rt-aDx">
+                    <navigationItem key="navigationItem" title="Your Profile" id="jBi-Rt-aDx">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="s4z-zg-EST">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -243,9 +243,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3615.5" y="155.5"/>
+            <point key="canvasLocation" x="2199.5" y="1023.5"/>
         </scene>
-        <!--Faq View Controller-->
+        <!--FAQ-->
         <scene sceneID="e5a-CP-wCb">
             <objects>
                 <viewController id="WF5-TE-KnM" customClass="FaqViewController" sceneMemberID="viewController">
@@ -254,11 +254,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ofu-by-Rdb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h6q-AZ-mc0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IkY-ny-w3Z">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -266,12 +266,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="70t-pq-0D1">
+                    <navigationItem key="navigationItem" title="FAQ" id="70t-pq-0D1">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="f31-aT-uTF">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="faqTextView" destination="IkY-ny-w3Z" id="KbA-ek-sUP"/>
                         <outlet property="sidebarButton" destination="f31-aT-uTF" id="eI3-xa-ZXT"/>
@@ -279,9 +279,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIi-r9-p81" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3776" y="939"/>
+            <point key="canvasLocation" x="3615.5" y="137.5"/>
         </scene>
-        <!--Onboarding View Controller-->
+        <!--Onboarding-->
         <scene sceneID="rvN-tk-c6P">
             <objects>
                 <viewController id="LhB-h1-uOW" customClass="OnboardingViewController" sceneMemberID="viewController">
@@ -293,8 +293,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Onboarding" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgN-qa-a06">
-                                <rect key="frame" x="139" y="138" width="91" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgN-qa-a06">
+                                <rect key="frame" x="139" y="138" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -302,7 +302,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lhG-fw-cDQ">
+                    <navigationItem key="navigationItem" title="Onboarding" id="lhG-fw-cDQ">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="HNI-bz-Hny">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -314,9 +314,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4Q-MM-NIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3615.5" y="-603.5"/>
+            <point key="canvasLocation" x="3615.5" y="-592.5"/>
         </scene>
-        <!--Map Table View Controller-->
+        <!--Evendale Locations-->
         <scene sceneID="25d-lW-KFg">
             <objects>
                 <tableViewController id="HLP-WD-MtJ" customClass="MapTableViewController" sceneMemberID="viewController">
@@ -340,7 +340,7 @@
                             <outlet property="delegate" destination="HLP-WD-MtJ" id="vXZ-DT-Eof"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="q2o-jO-OKB">
+                    <navigationItem key="navigationItem" title="Evendale Locations" id="q2o-jO-OKB">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="GKo-SO-sZA">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
@@ -352,7 +352,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2C-5Y-B5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3615.5" y="-1349.5"/>
+            <point key="canvasLocation" x="3615.5" y="-1358.5"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="rVV-3p-DyU">
@@ -379,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPE-Un-oIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4204.5" y="-1349.5"/>
+            <point key="canvasLocation" x="4200.5" y="-1358.5"/>
         </scene>
         <!--Fellow Interns-->
         <scene sceneID="Uhs-j5-BEa">
@@ -500,7 +500,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2G-dt-TM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386.5" y="155.5"/>
+            <point key="canvasLocation" x="2199.5" y="137.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EO6-nx-R77">
@@ -583,6 +583,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L2H-Hs-z8K" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KnY-oa-Cp4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -594,7 +595,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TB0-VE-AG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2915" y="695"/>
+            <point key="canvasLocation" x="2802.5" y="137.5"/>
         </scene>
     </scenes>
     <resources>
