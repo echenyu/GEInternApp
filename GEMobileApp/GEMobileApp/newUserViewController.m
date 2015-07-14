@@ -53,13 +53,20 @@
 //   If things don't work, then there will be an alert that gets shown!
 -(IBAction)createUser:(id)sender {
     PFUser *user = [PFUser user];
-    if(!self.email.text) {
-        NSLog(@"User didn't have a username");
-    }
     
-    if(self.password.text.length < 6) {
+    if([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Required Parameter Missing" message:@"1 or more required parameters are missing" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+        if(self.password.text.length < 6) {
         NSLog(@"WHY IS THIS BROKEN");
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Password too short" message:@"Make sure your password is 6 or more characters"delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    if(![self.password.text isEqualToString: self.passwordConfirm.text]) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Password mismatch" message:@"Make sure your password was entered correctly" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [alert show];
         return;
     }
@@ -69,6 +76,7 @@
 
     //This makes the username case insensitive
     NSString *lowerCaseUser = [self.email.text lowercaseString];
+    NSLog(@"%@", lowerCaseUser);
     
     user.username = lowerCaseUser;
     user.password = self.password.text;

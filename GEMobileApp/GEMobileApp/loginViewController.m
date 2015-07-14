@@ -54,7 +54,7 @@
 -(IBAction)login:(id)sender {
     
     
-    [PFUser logInWithUsernameInBackground:self.username.text password:self.password.text block:^(PFUser *user, NSError *error) {
+    [PFUser logInWithUsernameInBackground: [self.username.text lowercaseString] password:self.password.text block:^(PFUser *user, NSError *error) {
         if(user) {
             successfulUser = user;
             UINavigationController *navigationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"homepage"];
