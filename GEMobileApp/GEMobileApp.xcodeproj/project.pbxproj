@@ -12,6 +12,7 @@
 		07090DCA1B4F507A00848F14 /* gelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07090DC91B4F507A00848F14 /* gelogo.png */; };
 		07090DD61B555BAD00848F14 /* sideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07090DD51B555BAD00848F14 /* sideBarTableViewController.m */; };
 		07090DDE1B556FCA00848F14 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 07090DDD1B556FCA00848F14 /* menu.png */; };
+		07090DE21B56E72100848F14 /* engine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07090DE11B56E72100848F14 /* engine.jpg */; };
 		075FEB111B42BD6800CB6D39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB101B42BD6800CB6D39 /* main.m */; };
 		075FEB141B42BD6800CB6D39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB131B42BD6800CB6D39 /* AppDelegate.m */; };
 		075FEB171B42BD6800CB6D39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB161B42BD6800CB6D39 /* ViewController.m */; };
@@ -62,6 +63,7 @@
 		07090DD41B555BAD00848F14 /* sideBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sideBarTableViewController.h; sourceTree = "<group>"; };
 		07090DD51B555BAD00848F14 /* sideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sideBarTableViewController.m; sourceTree = "<group>"; };
 		07090DDD1B556FCA00848F14 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../../../../../../Downloads/menu.png; sourceTree = "<group>"; };
+		07090DE11B56E72100848F14 /* engine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = engine.jpg; path = ../../../../../../Downloads/engine.jpg; sourceTree = "<group>"; };
 		075FEB0B1B42BD6800CB6D39 /* GEMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075FEB0F1B42BD6800CB6D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		075FEB101B42BD6800CB6D39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		075FEB0E1B42BD6800CB6D39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07090DE11B56E72100848F14 /* engine.jpg */,
 				07090DDD1B556FCA00848F14 /* menu.png */,
 				07090DC91B4F507A00848F14 /* gelogo.png */,
 				07090DC71B4DBEBF00848F14 /* nopic.gif */,
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				075FEB1A1B42BD6800CB6D39 /* Main.storyboard in Resources */,
+				07090DE21B56E72100848F14 /* engine.jpg in Resources */,
 				075FEB1F1B42BD6800CB6D39 /* LaunchScreen.xib in Resources */,
 				07090DCA1B4F507A00848F14 /* gelogo.png in Resources */,
 				07090DC81B4DBEBF00848F14 /* nopic.gif in Resources */,

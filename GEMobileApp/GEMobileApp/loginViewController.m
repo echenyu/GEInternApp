@@ -8,6 +8,7 @@
 
 #import "loginViewController.h"
 #import <Parse/Parse.h>
+#import "SWRevealViewController.h"
 
 //Member variable for a user that was logged in.
 @interface loginViewController () {
@@ -57,10 +58,10 @@
     [PFUser logInWithUsernameInBackground: [self.username.text lowercaseString] password:self.password.text block:^(PFUser *user, NSError *error) {
         if(user) {
             successfulUser = user;
-            UINavigationController *navigationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"homepage"];
-            navigationVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            SWRevealViewController *revealVC = [self.storyboard instantiateViewControllerWithIdentifier:@"homepage"];
+            revealVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
             
-            [self presentViewController:navigationVC animated:YES completion:nil];
+            [self presentViewController:revealVC animated:YES completion:nil];
             self.password.text = @"";
         }
         else {

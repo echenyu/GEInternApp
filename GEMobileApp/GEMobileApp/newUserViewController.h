@@ -17,6 +17,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *password;
 @property (nonatomic, weak) IBOutlet UITextField *passwordConfirm;
 
+
 //Property for the image
 @property (nonatomic, weak) IBOutlet UIImageView *geLogo;
 

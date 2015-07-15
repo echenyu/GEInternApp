@@ -7,6 +7,7 @@
 //
 
 #import "newUserViewController.h"
+#import "SWRevealViewController.h"
 #import <Parse/Parse.h>
 
 @interface newUserViewController ()
@@ -71,13 +72,17 @@
         return;
     }
     
-    [user setObject:self.firstName.text forKey:@"firstName"];
-    [user setObject:self.lastName.text forKey:@"lastName"];
+    
 
     //This makes the username case insensitive
     NSString *lowerCaseUser = [self.email.text lowercaseString];
     NSLog(@"%@", lowerCaseUser);
     
+    //Set the attributes in user
+    [user setObject:self.firstName.text forKey:@"firstName"];
+    [user setObject:self.lastName.text forKey:@"lastName"];
+    [user setObject:@"Cincinnati, OH" forKey:@"location"];
+    [user setObject:@"EID Intern" forKey:@"program"];
     user.username = lowerCaseUser;
     user.password = self.password.text;
     user.email = self.email.text;
@@ -85,9 +90,9 @@
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             // Hooray! Let them use the app now.
-            UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"homepage"];
-            navigationController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-            [self presentViewController:navigationController animated:YES completion:nil];
+            SWRevealViewController *revealVC = [self.storyboard instantiateViewControllerWithIdentifier:@"homepage"];
+            revealVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            [self presentViewController:revealVC animated:YES completion:nil];
             
         } else {
             NSString *errorString = [error userInfo][@"error"];

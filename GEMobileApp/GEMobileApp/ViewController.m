@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -28,9 +29,9 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-    [self setup];
     
     // Do any additional setup after loading the view, typically from a nib.
+    [self setup];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,17 +44,13 @@
 //2. Sets up the picture (this function needs to be read a few times.
 -(void) setup {
     
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
-                                                                           green:93.0f/255.0f
-                                                                            blue:174.0f/255.0f
-                                                                           alpha:1.0f];
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
 
+    //Get the data from parse here!
     PFUser *user = [PFUser currentUser];
     NSString *firstName = [user objectForKey:@"firstName"];
     NSString *lastName = [user objectForKey:@"lastName"];
-    NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@" %@", lastName]];
+    NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@"%@", lastName]];
     self.profileName.text = fullName;
     UIImage *image = [UIImage imageNamed:@"nopic.gif"];
     if(![[PFUser currentUser]objectForKey:@"profilePicture"]) {
@@ -65,12 +62,28 @@
             }
         }];
     }
+    self.locationLabel.text = [user objectForKey:@"location"];
+    self.programLabel.text = [user objectForKey:@"program"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
     
-    //These two calls will make the profile picture a rounde circle instead of a square.
+    //These two calls will make the profile picture a round circle instead of a square.
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
     self.profilePic.clipsToBounds = YES;
     
+   
+    //Set up style of things
+    //Setup the navigation bar
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
+                                                                           green:93.0f/255.0f
+                                                                            blue:174.0f/255.0f
+                                                                           alpha:1.0f];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blackColor];
+    self.profileName.textColor = [UIColor whiteColor];
+    self.locationLabel.textColor = [UIColor whiteColor];
+    self.programLabel.textColor = [UIColor whiteColor];
+
 }
 
 //If a user clicks log out, then the application
