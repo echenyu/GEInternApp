@@ -36,11 +36,15 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.items = [[NSMutableArray alloc]init];
-    [self.items addObject:@"Evendale"];
-    [self.items addObject:@"BBC"];
     [self.items addObject:@"Blue Ash"];
+    [self.items addObject:@"Brendamour Business Center (BBC)"];
+    [self.items addObject:@"Crown Point"];
+    [self.items addObject:@"Evendale Plant"];
+    [self.items addObject:@"Indiana Wesleyan University (IWU)"];
     [self.items addObject:@"NorthPointe"];
     [self.items addObject:@"Peebles"];
+    [self.items addObject:@"Princeton Hill"];
+    [self.items addObject:@"Quality Technology Center"];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
                                                                            green:93.0f/255.0f
@@ -59,14 +63,12 @@
 //This are the functions that need to be implemented when something is a UITableViewController.
 //Delegate functions. We only need 1 section to be returned.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 //We need to return the number of items that the array has!
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [[self items]count];
 }
