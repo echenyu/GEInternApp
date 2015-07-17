@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic, weak) IBOutlet UILabel *profileName;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *programLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 
 @end
