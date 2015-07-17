@@ -78,9 +78,17 @@
     NSString *lowerCaseUser = [self.email.text lowercaseString];
     NSLog(@"%@", lowerCaseUser);
     
+    //Don't allow whitespace in the user name or last name
+    NSString *rawString = [self.firstName text];
+    NSCharacterSet *whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *firstName = [rawString stringByTrimmingCharactersInSet:whitespace];
+    NSString *rawString2 = [self.lastName text];
+    NSString *lastName = [rawString2 stringByTrimmingCharactersInSet:whitespace];
+    
     //Set the attributes in user
-    [user setObject:self.firstName.text forKey:@"firstName"];
-    [user setObject:self.lastName.text forKey:@"lastName"];
+    
+    [user setObject:firstName forKey:@"firstName"];
+    [user setObject:lastName forKey:@"lastName"];
     [user setObject:@"Cincinnati, OH" forKey:@"location"];
     [user setObject:@"EID Intern" forKey:@"program"];
     user.username = lowerCaseUser;

@@ -51,6 +51,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     PFQuery *userQuery = [PFUser query];
     [userQuery setLimit:1000];
+    [userQuery orderByAscending:@"firstName"];
     [userQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if(!error) {
             self.allUsers = objects;
@@ -77,7 +78,7 @@
     PFUser *indexUser = self.allUsers[indexPath.row];
     NSString *firstName = [indexUser objectForKey:@"firstName"];
     NSString *lastName = [indexUser objectForKey:@"lastName"];
-    NSString *fullName = [firstName stringByAppendingString:lastName];
+    NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@" %@", lastName]];
     cell.textLabel.text = fullName;
     
     return cell;

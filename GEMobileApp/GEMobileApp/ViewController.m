@@ -55,7 +55,7 @@
     //Get the data from parse here!
     NSString *firstName = [self.userPF objectForKey:@"firstName"];
     NSString *lastName = [self.userPF objectForKey:@"lastName"];
-    NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@"%@", lastName]];
+    NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@" %@", lastName]];
     self.profileName.text = fullName;
     UIImage *image = [UIImage imageNamed:@"nopic.gif"];
     if(![[PFUser currentUser]objectForKey:@"profilePicture"]) {
