@@ -13,6 +13,7 @@
 		07090DD61B555BAD00848F14 /* sideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07090DD51B555BAD00848F14 /* sideBarTableViewController.m */; };
 		07090DDE1B556FCA00848F14 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 07090DDD1B556FCA00848F14 /* menu.png */; };
 		07090DE21B56E72100848F14 /* engine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07090DE11B56E72100848F14 /* engine.jpg */; };
+		075E8B4C1B5933AF00AA32A8 /* UserSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E8B4B1B5933AF00AA32A8 /* UserSearchTableViewController.m */; };
 		075FEB111B42BD6800CB6D39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB101B42BD6800CB6D39 /* main.m */; };
 		075FEB141B42BD6800CB6D39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB131B42BD6800CB6D39 /* AppDelegate.m */; };
 		075FEB171B42BD6800CB6D39 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB161B42BD6800CB6D39 /* ViewController.m */; };
@@ -22,7 +23,6 @@
 		075FEB2B1B42BD6900CB6D39 /* GEMobileAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB2A1B42BD6900CB6D39 /* GEMobileAppTests.m */; };
 		075FEB391B42CA0100CB6D39 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB381B42CA0100CB6D39 /* OnboardingViewController.m */; };
 		075FEB3C1B42CA2500CB6D39 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB3B1B42CA2500CB6D39 /* MapViewController.m */; };
-		075FEB3F1B42CA9E00CB6D39 /* UserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */; };
 		07D6F54B1B4C66A000D649E0 /* MapTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D6F54A1B4C66A000D649E0 /* MapTableViewController.m */; };
 		07D6F54E1B4C698C00D649E0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6F54C1B4C698C00D649E0 /* Bolts.framework */; };
 		07D6F54F1B4C698C00D649E0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6F54D1B4C698C00D649E0 /* Parse.framework */; };
@@ -64,6 +64,8 @@
 		07090DD51B555BAD00848F14 /* sideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sideBarTableViewController.m; sourceTree = "<group>"; };
 		07090DDD1B556FCA00848F14 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../../../../../../Downloads/menu.png; sourceTree = "<group>"; };
 		07090DE11B56E72100848F14 /* engine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = engine.jpg; path = ../../../../../../Downloads/engine.jpg; sourceTree = "<group>"; };
+		075E8B4A1B5933AF00AA32A8 /* UserSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchTableViewController.h; sourceTree = "<group>"; };
+		075E8B4B1B5933AF00AA32A8 /* UserSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchTableViewController.m; sourceTree = "<group>"; };
 		075FEB0B1B42BD6800CB6D39 /* GEMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075FEB0F1B42BD6800CB6D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		075FEB101B42BD6800CB6D39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,8 +83,6 @@
 		075FEB381B42CA0100CB6D39 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
 		075FEB3A1B42CA2500CB6D39 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		075FEB3B1B42CA2500CB6D39 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		075FEB3D1B42CA9E00CB6D39 /* UserSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchViewController.h; sourceTree = "<group>"; };
-		075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchViewController.m; sourceTree = "<group>"; };
 		07D6F5491B4C66A000D649E0 /* MapTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewController.h; sourceTree = "<group>"; };
 		07D6F54A1B4C66A000D649E0 /* MapTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewController.m; sourceTree = "<group>"; };
 		07D6F54C1B4C698C00D649E0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -240,8 +240,8 @@
 			children = (
 				07D6F5491B4C66A000D649E0 /* MapTableViewController.h */,
 				07D6F54A1B4C66A000D649E0 /* MapTableViewController.m */,
-				075FEB3D1B42CA9E00CB6D39 /* UserSearchViewController.h */,
-				075FEB3E1B42CA9E00CB6D39 /* UserSearchViewController.m */,
+				075E8B4A1B5933AF00AA32A8 /* UserSearchTableViewController.h */,
+				075E8B4B1B5933AF00AA32A8 /* UserSearchTableViewController.m */,
 				075FEB3A1B42CA2500CB6D39 /* MapViewController.h */,
 				075FEB3B1B42CA2500CB6D39 /* MapViewController.m */,
 				6697945F1B42D2120004468B /* FaqViewController.h */,
@@ -427,8 +427,8 @@
 				075FEB171B42BD6800CB6D39 /* ViewController.m in Sources */,
 				075FEB141B42BD6800CB6D39 /* AppDelegate.m in Sources */,
 				075FEB3C1B42CA2500CB6D39 /* MapViewController.m in Sources */,
-				075FEB3F1B42CA9E00CB6D39 /* UserSearchViewController.m in Sources */,
 				07D6F56C1B4C6BD000D649E0 /* newUserViewController.m in Sources */,
+				075E8B4C1B5933AF00AA32A8 /* UserSearchTableViewController.m in Sources */,
 				07D6F56F1B4C721700D649E0 /* loginViewController.m in Sources */,
 				075FEB391B42CA0100CB6D39 /* OnboardingViewController.m in Sources */,
 				07090DD61B555BAD00848F14 /* sideBarTableViewController.m in Sources */,

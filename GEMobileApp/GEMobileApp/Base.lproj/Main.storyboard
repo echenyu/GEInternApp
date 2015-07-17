@@ -397,46 +397,37 @@
             <point key="canvasLocation" x="4200.5" y="-1358.5"/>
         </scene>
         <!--Fellow Interns-->
-        <scene sceneID="Uhs-j5-BEa">
+        <scene sceneID="TTF-Tx-d7U">
             <objects>
-                <viewController id="ib0-Ru-LVS" customClass="UserSearchViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8hT-7O-obP"/>
-                        <viewControllerLayoutGuide type="bottom" id="LVh-ny-7aa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sYb-Uy-pAJ">
+                <tableViewController id="XxW-O4-kUx" customClass="UserSearchTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eMy-An-DKl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="L7C-Aj-Yj2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="EKd-Fk-tyR">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EKd-Fk-tyR" id="8WD-Up-2v1">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Fellow Interns" id="rmB-mW-txw">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="w3d-Xn-OO7">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="mu6-UR-7EV">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mu6-UR-7EV" id="cvq-Zg-MQg">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XxW-O4-kUx" id="wBV-ne-LtT"/>
+                            <outlet property="delegate" destination="XxW-O4-kUx" id="f2J-VD-x5p"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Fellow Interns" id="eKI-im-tS7">
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="oaH-fr-IwF"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="sidebarButton" destination="w3d-Xn-OO7" id="7IZ-BC-RVL"/>
+                        <outlet property="sidebarButton" destination="oaH-fr-IwF" id="YC3-8w-kAw"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="35K-9H-rxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pxr-DA-bpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3615.5" y="-2087.5"/>
+            <point key="canvasLocation" x="3517.5" y="-2088.5"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="j5k-sV-mwX">
@@ -548,7 +539,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ib0-Ru-LVS" kind="relationship" relationship="rootViewController" id="xgJ-Ar-gwC"/>
+                        <segue destination="XxW-O4-kUx" kind="relationship" relationship="rootViewController" id="Hsa-1I-41y"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Os-bJ-fAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
