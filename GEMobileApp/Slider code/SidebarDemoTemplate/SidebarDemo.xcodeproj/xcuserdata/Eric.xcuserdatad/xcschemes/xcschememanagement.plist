@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>SidebarDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F4EECF0D177C99F400778578</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+<<<<<<< HEAD:GEMobileApp/Pods/Pods.xcodeproj/xcuserdata/Eric.xcuserdatad/xcschemes/xcschememanagement.plist
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1E03423B9B4D6B2BC66FE52D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCF7A9DDB641DC31C10C11D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+=======
+>>>>>>> userSearch:GEMobileApp/Slider code/SidebarDemoTemplate/SidebarDemo.xcodeproj/xcuserdata/Eric.xcuserdatad/xcschemes/xcschememanagement.plist
+</dict>
+</plist>

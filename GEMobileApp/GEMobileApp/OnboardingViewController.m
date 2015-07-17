@@ -7,6 +7,8 @@
 //
 
 #import "OnboardingViewController.h"
+#import "SWRevealViewController.h"
+
 
 @interface OnboardingViewController ()
 
@@ -28,12 +30,27 @@
     label.text = @"Testing for scroll stuff";
     
     [scroll addSubview:label];*/
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10, 64 + 10, 375-10, 40)];
-    title.text = @"Onboarding";
-    title.textAlignment = NSTextAlignmentCenter;
-    title.font = [UIFont systemFontOfSize:30];
-    [self.view addSubview:title];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
+                                                                           green:93.0f/255.0f
+                                                                            blue:174.0f/255.0f
+                                                                           alpha:1.0f];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
+//    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10, 64 + 10, 375-10, 40)];
+//    title.text = @"Onboarding";
+//    title.textAlignment = NSTextAlignmentCenter;
+//    title.font = [UIFont systemFontOfSize:30];
+   // [self.view addSubview:title];
     
     //Generating the text for the content
     NSArray *contentArray = @[@"\nOn this page, you will find basic information about the onboarding process. A few commom frequently asked questions can be found in the FAQ section of this app.",
