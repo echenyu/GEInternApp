@@ -9,6 +9,7 @@
 #import "UserSearchTableViewController.h"
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
+#import "ViewController.h"
 
 
 @interface UserSearchTableViewController ()
@@ -79,11 +80,12 @@
     NSString *fullName = [firstName stringByAppendingString:lastName];
     cell.textLabel.text = fullName;
     
-    
-    
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"profileSegue"sender:self];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -119,14 +121,21 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *pathToUser = [self.tableView indexPathForSelectedRow];
+    
+    PFUser *user = [self.allUsers objectAtIndex:pathToUser.row];
+    
+    [[segue
+      destinationViewController]setUserPF:user];
+    
 }
-*/
+
 
 @end

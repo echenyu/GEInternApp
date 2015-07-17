@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parse/Parse.h"
+
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -15,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *programLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *profilePic;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (nonatomic, strong) PFUser *userPF;
 
 
 @end

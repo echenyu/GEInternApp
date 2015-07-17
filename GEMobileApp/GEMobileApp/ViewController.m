@@ -13,6 +13,7 @@
 
 
 @interface ViewController ()
+
 @end
 
 @implementation ViewController
@@ -34,6 +35,13 @@
     [self setup];
 }
 
+-(PFUser *)userPF {
+    if(!_userPF) {
+        NSLog(@"did this run");
+        _userPF = [PFUser currentUser];
+    }
+    return _userPF;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -43,27 +51,24 @@
 //1. Sets up the profileName by picking the attribute "name"
 //2. Sets up the picture (this function needs to be read a few times.
 -(void) setup {
-    
-    
 
     //Get the data from parse here!
-    PFUser *user = [PFUser currentUser];
-    NSString *firstName = [user objectForKey:@"firstName"];
-    NSString *lastName = [user objectForKey:@"lastName"];
+    NSString *firstName = [self.userPF objectForKey:@"firstName"];
+    NSString *lastName = [self.userPF objectForKey:@"lastName"];
     NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@"%@", lastName]];
     self.profileName.text = fullName;
     UIImage *image = [UIImage imageNamed:@"nopic.gif"];
     if(![[PFUser currentUser]objectForKey:@"profilePicture"]) {
         self.profilePic.image = image;
     } else {
-        [user[@"profilePicture"]getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        [self.userPF[@"profilePicture"]getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if(!error) {
                 self.profilePic.image = [UIImage imageWithData:data];
             }
         }];
     }
-    self.locationLabel.text = [user objectForKey:@"location"];
-    self.programLabel.text = [user objectForKey:@"program"];
+    self.locationLabel.text = [self.userPF objectForKey:@"location"];
+    self.programLabel.text = [self.userPF objectForKey:@"program"];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
     
     //These two calls will make the profile picture a round circle instead of a square.
