@@ -7,6 +7,8 @@
 //
 
 #import "sideBarTableViewController.h"
+#import "SWRevealViewController.h"
+#import "Parse/Parse.h"
 
 @interface sideBarTableViewController ()
 
@@ -28,6 +30,7 @@
     [self.items addObject:@"Onboarding"];
     [self.items addObject:@"Maps"];
     [self.items addObject:@"FAQ"];
+    [self.items addObject:@"Log Out"];
 }
 
 
@@ -64,12 +67,36 @@
         [self performSegueWithIdentifier:@"onboarding" sender:self];
     } else if(indexPath.row == 3) {
         [self performSegueWithIdentifier:@"maps" sender:self];
-    } else {
+    } else if (indexPath.row == 4){
         [self performSegueWithIdentifier:@"faq" sender:self];
+    } else {
+        [self.revealViewController revealToggleAnimated:YES];
+        UIAlertView *logoutAction = [[UIAlertView alloc]initWithTitle:@"Logout Confirmation" message:@"Are you sure you want to logout?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
+        logoutAction.tag = 100;
+        [logoutAction show];
+        
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(alertView.tag == 100) {
+        if(buttonIndex == 1) {
+            [self logout];
+        }
     }
 }
 
 
+//If a user clicks log out, then the application
+//will sign out the PFUser and open a viewController named "login"
+-(void)logout {
+    [PFUser logOut];
+    UINavigationController *navigationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
+    navigationVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:navigationVC animated:YES completion:nil];
+    
+    
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface sideBarTableViewController : UITableViewController
+@interface sideBarTableViewController : UITableViewController <UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *items;
 

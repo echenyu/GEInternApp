@@ -135,6 +135,7 @@
     
     [[segue
       destinationViewController]setUserPF:user];
+    [[segue destinationViewController]setNoEditButtonNeeded:YES];
     
 }
 

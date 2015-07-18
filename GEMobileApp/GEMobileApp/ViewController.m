@@ -69,7 +69,10 @@
     }
     self.locationLabel.text = [self.userPF objectForKey:@"location"];
     self.programLabel.text = [self.userPF objectForKey:@"program"];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
+    
+    if(!self.noEditButtonNeeded) {
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    }
     
     //These two calls will make the profile picture a round circle instead of a square.
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
@@ -91,16 +94,7 @@
 
 }
 
-//If a user clicks log out, then the application
-//will sign out the PFUser and open a viewController named "login"
--(void)logout {
-    [PFUser logOut];
-    UINavigationController *navigationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
-    navigationVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:navigationVC animated:YES completion:nil];
-    
-    
-}
+
 
 //This is an IBAction connected to the Upload New Picture
 //When picture is chosen, the UIImageView Picture will change
