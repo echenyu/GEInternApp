@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@import GoogleMaps;
 
 @interface MapViewController : UIViewController
 
-@property (nonatomic, strong) NSString *locationString;
+-(void)setup;
+
+
+
+@property (nonatomic, strong) NSMutableArray *locationInfo;
+@property (nonatomic, retain) NSNumber *mapIndex;
 
 @end

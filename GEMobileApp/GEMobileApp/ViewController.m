@@ -77,10 +77,16 @@
     //These two calls will make the profile picture a round circle instead of a square.
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
     self.profilePic.clipsToBounds = YES;
+    self.profilePic.layer.borderWidth = 3.0;
+    self.profilePic.layer.borderColor = [[UIColor whiteColor]CGColor];
     
    
     //Set up style of things
     //Setup the navigation bar
+    self.backgroundColorView.backgroundColor = [UIColor colorWithRed:31.0f/255.0f
+                                                              green:58.0f/255.0f
+                                                               blue:147.0f/255.0f
+                                                              alpha:1.0f];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
                                                                            green:93.0f/255.0f

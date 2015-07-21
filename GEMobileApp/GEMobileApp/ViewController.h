@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *programLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *profilePic;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet UIView *backgroundColorView;
 @property (nonatomic, strong) PFUser *userPF;
 @property BOOL *noEditButtonNeeded;
 
