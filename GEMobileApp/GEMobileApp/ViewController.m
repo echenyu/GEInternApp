@@ -57,6 +57,7 @@
     NSString *lastName = [self.userPF objectForKey:@"lastName"];
     NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@" %@", lastName]];
     self.profileName.text = fullName;
+    
     UIImage *image = [UIImage imageNamed:@"nopic.gif"];
     if(![[PFUser currentUser]objectForKey:@"profilePicture"]) {
         self.profilePic.image = image;
@@ -69,10 +70,8 @@
     }
     self.locationLabel.text = [self.userPF objectForKey:@"location"];
     self.programLabel.text = [self.userPF objectForKey:@"program"];
-    
-    if(!self.noEditButtonNeeded) {
-        self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    }
+    self.majorLabel.text = [self.userPF objectForKey:@"major"];
+    self.schoolLabel.text = [self.userPF objectForKey:@"college"];
     
     //These two calls will make the profile picture a round circle instead of a square.
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
@@ -97,7 +96,10 @@
     self.profileName.textColor = [UIColor whiteColor];
     self.locationLabel.textColor = [UIColor whiteColor];
     self.programLabel.textColor = [UIColor whiteColor];
-
+    self.schoolLabel.textColor = [UIColor whiteColor];
+    self.majorLabel.textColor = [UIColor whiteColor];
+    self.descriptionView.textColor = [UIColor whiteColor];
+    self.descriptionView.backgroundColor = [UIColor blackColor];
 }
 
 

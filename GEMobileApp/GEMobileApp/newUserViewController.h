@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface newUserViewController : UIViewController
+@interface newUserViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
 //These properties are just the TextFields
 @property (nonatomic, weak) IBOutlet UITextField *firstName;
@@ -16,7 +16,8 @@
 @property (nonatomic, weak) IBOutlet UITextField *email;
 @property (nonatomic, weak) IBOutlet UITextField *password;
 @property (nonatomic, weak) IBOutlet UITextField *passwordConfirm;
-
+@property (nonatomic, weak) IBOutlet UITextField *collegeField;
+@property (nonatomic, weak) IBOutlet UITextField *majorField; 
 
 //Property for the image
 @property (nonatomic, weak) IBOutlet UIImageView *geLogo;
@@ -27,6 +28,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *emailLabel;
 @property (nonatomic, weak) IBOutlet UILabel *passwordLabel;
 @property (nonatomic, weak) IBOutlet UILabel *passwordConfirmLabel;
+@property (nonatomic, weak) IBOutlet UILabel *collegeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *majorLabel;
 
 //Property for the sign up button
 @property (nonatomic, weak) IBOutlet UIButton *signUpButton;

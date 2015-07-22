@@ -131,6 +131,7 @@
     marker.title = title;
     marker.snippet = snippet;
     marker.map = _googleMap;
+    [_googleMap setSelectedMarker:marker];
     
 }
 /*

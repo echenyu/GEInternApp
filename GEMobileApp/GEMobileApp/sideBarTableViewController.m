@@ -26,6 +26,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.items = [[NSMutableArray alloc]init];
     [self.items addObject:@"Home"];
+    [self.items addObject:@"Edit Profile"];
     [self.items addObject:@"User Search"];
     [self.items addObject:@"Onboarding"];
     [self.items addObject:@"Maps"];
@@ -62,12 +63,14 @@
         NSLog(@"perform");
         [self performSegueWithIdentifier:@"homePage" sender:self];
     } else if(indexPath.row == 1) {
-        [self performSegueWithIdentifier:@"userSearch" sender:self];
+        [self performSegueWithIdentifier:@"editProfile" sender:self];
     } else if(indexPath.row == 2) {
-        [self performSegueWithIdentifier:@"onboarding" sender:self];
+        [self performSegueWithIdentifier:@"userSearch" sender:self];
     } else if(indexPath.row == 3) {
+        [self performSegueWithIdentifier:@"onboarding" sender:self];
+    } else if(indexPath.row == 4) {
         [self performSegueWithIdentifier:@"maps" sender:self];
-    } else if (indexPath.row == 4){
+    } else if (indexPath.row == 5){
         [self performSegueWithIdentifier:@"faq" sender:self];
     } else {
         [self.revealViewController revealToggleAnimated:YES];
