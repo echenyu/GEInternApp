@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserSearchTableViewController : UITableViewController
+@interface UserSearchTableViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (nonatomic, weak) IBOutlet UISearchBar *nameSearch;
+@property (nonatomic, weak) NSMutableArray *filteredResults;
+
 @property (nonatomic, strong) NSArray *allUsers; 
 
 @end

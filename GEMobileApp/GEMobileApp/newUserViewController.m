@@ -14,7 +14,10 @@
 
 @end
 
-@implementation newUserViewController
+@implementation newUserViewController {
+   UIPickerView *picker;
+    NSMutableArray *items;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,14 +37,54 @@
     self.lastNameLabel.textColor = [UIColor whiteColor];
     self.emailLabel.textColor = [UIColor whiteColor];
     self.passwordLabel.textColor = [UIColor whiteColor];
+    self.collegeLabel.textColor = [UIColor whiteColor];
+    self.majorLabel.textColor = [UIColor whiteColor];
     self.passwordConfirmLabel.textColor = [UIColor whiteColor];
     self.signUpButton.backgroundColor = [UIColor colorWithRed:58.0f/255.0f
                                                         green:93.0f/255.0f
                                                          blue:174.0f/255.0f
                                                         alpha:1.0f];
     self.signUpButton.tintColor = [UIColor whiteColor];
-    
+    picker = [[UIPickerView alloc]init];
+    [picker setDataSource:self];
+    [picker setDelegate:self];
+    picker.showsSelectionIndicator = YES;
+    self.majorField.inputView = picker;
+    self.majorField.tintColor = [UIColor clearColor];
+    [self setupPicker];
+    [self populateMajors];
 }
+
+-(void) populateMajors {
+    items = [[NSMutableArray alloc]init];
+    [items addObject:@"Aerospace Engineering"];
+    [items addObject:@"Business"];
+    [items addObject:@"Chemical Engineering"];
+    [items addObject:@"Computer Science"];
+    [items addObject:@"Electrical Engineering"];
+    [items addObject:@"Materials Science"];
+    [items addObject:@"Mechanical Engineering"];
+    [items addObject:@"Supply Chain"];
+}
+
+//Review this code. Don't really understand why the picker works...
+-(void) setupPicker {
+    UIToolbar*  mypickerToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 56)];
+    mypickerToolbar.barStyle = UIBarStyleDefault;
+    [mypickerToolbar sizeToFit];
+    NSMutableArray *barItems = [[NSMutableArray alloc] init];
+    UIBarButtonItem *flexSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    [barItems addObject:flexSpace];
+    UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(pickerDoneClicked)];
+    [barItems addObject:doneBtn];
+    [mypickerToolbar setItems:barItems animated:YES];
+    self.majorField.inputAccessoryView = mypickerToolbar;
+}
+
+-(void)pickerDoneClicked{
+    [self.majorField resignFirstResponder];
+}
+
 
 //This is where the logic is made for actually creating a new user within parse.
 //This function is called after the user clicks "Submit" to create new account.
@@ -71,6 +114,16 @@
         [alert show];
         return;
     }
+    if(self.collegeField.text.length < 4) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Pick a college" message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    if(self.majorField.text.length < 4) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Major Missing" message:@"Make sure you select a major" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
     
     
 
@@ -91,6 +144,8 @@
     [user setObject:lastName forKey:@"lastName"];
     [user setObject:@"Cincinnati, OH" forKey:@"location"];
     [user setObject:@"EID Intern" forKey:@"program"];
+    [user setObject:self.majorField.text forKey:@"major"];
+    [user setObject:self.collegeField.text forKey:@"college"];
     user.username = lowerCaseUser;
     user.password = self.password.text;
     user.email = self.email.text;
@@ -112,6 +167,22 @@
     }];
 }
 
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [items count];
+}
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [items objectAtIndex:row];//Or, your suitable title; like Choice-a, etc.
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    self.majorField.text = [items objectAtIndex:row];
+}
 /*
 #pragma mark - Navigation
 

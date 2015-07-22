@@ -57,6 +57,7 @@
     NSString *lastName = [self.userPF objectForKey:@"lastName"];
     NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@" %@", lastName]];
     self.profileName.text = fullName;
+    
     UIImage *image = [UIImage imageNamed:@"nopic.gif"];
     if(![[PFUser currentUser]objectForKey:@"profilePicture"]) {
         self.profilePic.image = image;
@@ -69,38 +70,48 @@
     }
     self.locationLabel.text = [self.userPF objectForKey:@"location"];
     self.programLabel.text = [self.userPF objectForKey:@"program"];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
+    self.majorLabel.text = [self.userPF objectForKey:@"major"];
+    self.schoolLabel.text = [self.userPF objectForKey:@"college"];
+    self.phone.text = [self.userPF objectForKey:@"phoneNumber"];
+    self.address.text = [self.userPF objectForKey:@"address"];
+    self.email.text = [self.userPF objectForKey:@"email"];
+    self.about.text = [self.userPF objectForKey:@"about"];
     
     //These two calls will make the profile picture a round circle instead of a square.
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
     self.profilePic.clipsToBounds = YES;
+    self.profilePic.layer.borderWidth = 3.0;
+    self.profilePic.layer.borderColor = [[UIColor whiteColor]CGColor];
     
    
     //Set up style of things
     //Setup the navigation bar
+    self.backgroundColorView.backgroundColor = [UIColor colorWithRed:31.0f/255.0f
+                                                              green:58.0f/255.0f
+                                                               blue:147.0f/255.0f
+                                                              alpha:1.0f];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:58.0f/255.0f
                                                                            green:93.0f/255.0f
                                                                             blue:174.0f/255.0f
                                                                            alpha:1.0f];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.about.backgroundColor = [UIColor blackColor];
     self.view.backgroundColor = [UIColor blackColor];
     self.profileName.textColor = [UIColor whiteColor];
     self.locationLabel.textColor = [UIColor whiteColor];
     self.programLabel.textColor = [UIColor whiteColor];
-
+    self.schoolLabel.textColor = [UIColor whiteColor];
+    self.majorLabel.textColor = [UIColor whiteColor];
+    self.descriptionView.textColor = [UIColor whiteColor];
+    self.descriptionView.backgroundColor = [UIColor blackColor];
+    self.phone.textColor = [UIColor whiteColor];
+    self.address.textColor = [UIColor whiteColor];
+    self.email.textColor = [UIColor whiteColor];
+    self.about.textColor = [UIColor whiteColor];
 }
 
-//If a user clicks log out, then the application
-//will sign out the PFUser and open a viewController named "login"
--(void)logout {
-    [PFUser logOut];
-    UINavigationController *navigationVC = [self.storyboard instantiateViewControllerWithIdentifier:@"login"];
-    navigationVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:navigationVC animated:YES completion:nil];
-    
-    
-}
+
 
 //This is an IBAction connected to the Upload New Picture
 //When picture is chosen, the UIImageView Picture will change
