@@ -35,11 +35,9 @@
                                                                             blue:174.0f/255.0f
                                                                            alpha:1.0f];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+
+    self.filteredResults = [NSMutableArray arrayWithCapacity:[self.allUsers count]];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,8 +70,16 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    PFUser *indexUser = self.allUsers[indexPath.row];
+    PFUser *indexUser;
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        indexUser = self.filteredResults[indexPath.row];
+
+    } else {
+        indexUser = self.allUsers[indexPath.row];
+    }
+    
     NSString *firstName = [indexUser objectForKey:@"firstName"];
     NSString *lastName = [indexUser objectForKey:@"lastName"];
     NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@" %@", lastName]];
@@ -86,7 +92,30 @@
     [self performSegueWithIdentifier:@"profileSegue"sender:self];
 }
 
-/*
+-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
+    [self.filteredResults removeAllObjects];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
+    self.filteredResults = [NSMutableArray arrayWithArray:[self.filteredResults filteredArrayUsingPredicate:predicate]];
+}
+
+#pragma mark - UISearchDisplayController Delegate Methods
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    // Tells the table data source to reload when text changes
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    // Tells the table data source to reload when scope bar selection changes
+    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+    /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
@@ -122,6 +151,8 @@
 
 
 #pragma mark - Navigation
+
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

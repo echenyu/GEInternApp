@@ -8,6 +8,7 @@
 
 #import "editProfileViewController.h"
 #import "SWRevealViewController.h"
+#import "Parse/Parse.h"
 
 @interface editProfileViewController ()
 
@@ -33,6 +34,8 @@
                                                                             blue:174.0f/255.0f
                                                                            alpha:1.0f];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    [self setup];
     // Do any additional setup after loading the view.
 }
 
@@ -41,6 +44,40 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) setup {
+    PFUser *user = [PFUser currentUser];
+
+    NSString *location = [user objectForKey:@"location"];
+    NSString *college = [user objectForKey:@"college"];
+    NSString *major = [user objectForKey:@"major"];
+    NSString *year = [user objectForKey:@"year"];
+    NSString *address = [user objectForKey:@"address"];
+    NSString *program = [user objectForKey:@"program"];
+    NSString *about = [user objectForKey:@"about"];
+    NSString *phone = [user objectForKey:@"phoneNumber"];
+    
+    self.college.text = college;
+    self.major.text = major;
+    self.year.text = year;
+    self.summerAddress.text = address;
+    self.location.text = location;
+    self.internProgram.text = program;
+    self.about.text = about;
+    self.phoneNumber.text = phone;
+}
+
+-(IBAction)saveProfile:(id)sender {
+    PFUser *user = [PFUser currentUser];
+    [user setObject:self.college.text forKey:@"college"];
+    [user setObject:self.major.text forKey:@"major"];
+    [user setObject:self.year.text forKey:@"year"];
+    [user setObject:self.summerAddress.text forKey:@"address"];
+    [user setObject:self.location.text forKey:@"location"];
+    [user setObject:self.internProgram.text forKey:@"program"];
+    [user setObject:self.about.text forKey:@"about"];
+    [user setObject:self.phoneNumber.text forKey:@"phoneNumber"];
+    [user saveInBackground];
+}
 /*
 #pragma mark - Navigation
 

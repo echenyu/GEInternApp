@@ -72,6 +72,10 @@
     self.programLabel.text = [self.userPF objectForKey:@"program"];
     self.majorLabel.text = [self.userPF objectForKey:@"major"];
     self.schoolLabel.text = [self.userPF objectForKey:@"college"];
+    self.phone.text = [self.userPF objectForKey:@"phoneNumber"];
+    self.address.text = [self.userPF objectForKey:@"address"];
+    self.email.text = [self.userPF objectForKey:@"email"];
+    self.about.text = [self.userPF objectForKey:@"about"];
     
     //These two calls will make the profile picture a round circle instead of a square.
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
@@ -92,6 +96,7 @@
                                                                             blue:174.0f/255.0f
                                                                            alpha:1.0f];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.about.backgroundColor = [UIColor blackColor];
     self.view.backgroundColor = [UIColor blackColor];
     self.profileName.textColor = [UIColor whiteColor];
     self.locationLabel.textColor = [UIColor whiteColor];
@@ -100,6 +105,10 @@
     self.majorLabel.textColor = [UIColor whiteColor];
     self.descriptionView.textColor = [UIColor whiteColor];
     self.descriptionView.backgroundColor = [UIColor blackColor];
+    self.phone.textColor = [UIColor whiteColor];
+    self.address.textColor = [UIColor whiteColor];
+    self.email.textColor = [UIColor whiteColor];
+    self.about.textColor = [UIColor whiteColor];
 }
 
 

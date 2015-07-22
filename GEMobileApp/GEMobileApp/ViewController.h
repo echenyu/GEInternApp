@@ -19,6 +19,10 @@
 @property (nonatomic, weak) IBOutlet UILabel *schoolLabel;
 @property (nonatomic, weak) IBOutlet UILabel *majorLabel;
 @property (nonatomic, weak) IBOutlet UITextView *descriptionView;
+@property (nonatomic, weak) IBOutlet UITextView *about;
+@property (nonatomic, weak) IBOutlet UILabel *phone;
+@property (nonatomic, weak) IBOutlet UILabel *address;
+@property (nonatomic, weak) IBOutlet UILabel *email;
 
 
 //User Picture
