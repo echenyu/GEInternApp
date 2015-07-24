@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07090DC61B4D792700848F14 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07090DC51B4D792700848F14 /* SWRevealViewController.m */; };
-		07090DC81B4DBEBF00848F14 /* nopic.gif in Resources */ = {isa = PBXBuildFile; fileRef = 07090DC71B4DBEBF00848F14 /* nopic.gif */; };
-		07090DCA1B4F507A00848F14 /* gelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07090DC91B4F507A00848F14 /* gelogo.png */; };
 		07090DD61B555BAD00848F14 /* sideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07090DD51B555BAD00848F14 /* sideBarTableViewController.m */; };
-		07090DDE1B556FCA00848F14 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 07090DDD1B556FCA00848F14 /* menu.png */; };
-		07090DE21B56E72100848F14 /* engine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07090DE11B56E72100848F14 /* engine.jpg */; };
 		075E8B4C1B5933AF00AA32A8 /* UserSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E8B4B1B5933AF00AA32A8 /* UserSearchTableViewController.m */; };
 		075FEB111B42BD6800CB6D39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB101B42BD6800CB6D39 /* main.m */; };
 		075FEB141B42BD6800CB6D39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB131B42BD6800CB6D39 /* AppDelegate.m */; };
@@ -23,6 +19,10 @@
 		075FEB2B1B42BD6900CB6D39 /* GEMobileAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB2A1B42BD6900CB6D39 /* GEMobileAppTests.m */; };
 		075FEB391B42CA0100CB6D39 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB381B42CA0100CB6D39 /* OnboardingViewController.m */; };
 		075FEB3C1B42CA2500CB6D39 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FEB3B1B42CA2500CB6D39 /* MapViewController.m */; };
+		0787EF7A1B6283CE00C9D8F1 /* engine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0787EF791B6283CE00C9D8F1 /* engine.jpg */; };
+		0787EF7C1B6283FD00C9D8F1 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0787EF7B1B6283FD00C9D8F1 /* menu.png */; };
+		0787EF7E1B62840D00C9D8F1 /* gelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0787EF7D1B62840D00C9D8F1 /* gelogo.png */; };
+		0787EF801B62841B00C9D8F1 /* nopic.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0787EF7F1B62841B00C9D8F1 /* nopic.gif */; };
 		07D6F54B1B4C66A000D649E0 /* MapTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D6F54A1B4C66A000D649E0 /* MapTableViewController.m */; };
 		07D6F54E1B4C698C00D649E0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6F54C1B4C698C00D649E0 /* Bolts.framework */; };
 		07D6F54F1B4C698C00D649E0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D6F54D1B4C698C00D649E0 /* Parse.framework */; };
@@ -59,12 +59,8 @@
 /* Begin PBXFileReference section */
 		07090DC41B4D792700848F14 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		07090DC51B4D792700848F14 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		07090DC71B4DBEBF00848F14 /* nopic.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = nopic.gif; path = ../../../../../../Downloads/nopic.gif; sourceTree = "<group>"; };
-		07090DC91B4F507A00848F14 /* gelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gelogo.png; path = ../../../../../../Downloads/gelogo.png; sourceTree = "<group>"; };
 		07090DD41B555BAD00848F14 /* sideBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sideBarTableViewController.h; sourceTree = "<group>"; };
 		07090DD51B555BAD00848F14 /* sideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sideBarTableViewController.m; sourceTree = "<group>"; };
-		07090DDD1B556FCA00848F14 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../../../../../../Downloads/menu.png; sourceTree = "<group>"; };
-		07090DE11B56E72100848F14 /* engine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = engine.jpg; path = ../../../../../../Downloads/engine.jpg; sourceTree = "<group>"; };
 		075E8B4A1B5933AF00AA32A8 /* UserSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSearchTableViewController.h; sourceTree = "<group>"; };
 		075E8B4B1B5933AF00AA32A8 /* UserSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSearchTableViewController.m; sourceTree = "<group>"; };
 		075FEB0B1B42BD6800CB6D39 /* GEMobileApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEMobileApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +80,10 @@
 		075FEB381B42CA0100CB6D39 /* OnboardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnboardingViewController.m; sourceTree = "<group>"; };
 		075FEB3A1B42CA2500CB6D39 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		075FEB3B1B42CA2500CB6D39 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		0787EF791B6283CE00C9D8F1 /* engine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = engine.jpg; sourceTree = "<group>"; };
+		0787EF7B1B6283FD00C9D8F1 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		0787EF7D1B62840D00C9D8F1 /* gelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gelogo.png; sourceTree = "<group>"; };
+		0787EF7F1B62841B00C9D8F1 /* nopic.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = nopic.gif; sourceTree = "<group>"; };
 		07D6F5491B4C66A000D649E0 /* MapTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewController.h; sourceTree = "<group>"; };
 		07D6F54A1B4C66A000D649E0 /* MapTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewController.m; sourceTree = "<group>"; };
 		07D6F54C1B4C698C00D649E0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -200,10 +200,10 @@
 		075FEB0E1B42BD6800CB6D39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07090DE11B56E72100848F14 /* engine.jpg */,
-				07090DDD1B556FCA00848F14 /* menu.png */,
-				07090DC91B4F507A00848F14 /* gelogo.png */,
-				07090DC71B4DBEBF00848F14 /* nopic.gif */,
+				0787EF791B6283CE00C9D8F1 /* engine.jpg */,
+				0787EF7B1B6283FD00C9D8F1 /* menu.png */,
+				0787EF7D1B62840D00C9D8F1 /* gelogo.png */,
+				0787EF7F1B62841B00C9D8F1 /* nopic.gif */,
 				075FEB0F1B42BD6800CB6D39 /* Info.plist */,
 				075FEB101B42BD6800CB6D39 /* main.m */,
 			);
@@ -371,13 +371,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0787EF7C1B6283FD00C9D8F1 /* menu.png in Resources */,
 				075FEB1A1B42BD6800CB6D39 /* Main.storyboard in Resources */,
-				07090DE21B56E72100848F14 /* engine.jpg in Resources */,
+				0787EF7E1B62840D00C9D8F1 /* gelogo.png in Resources */,
 				075FEB1F1B42BD6800CB6D39 /* LaunchScreen.xib in Resources */,
-				07090DCA1B4F507A00848F14 /* gelogo.png in Resources */,
-				07090DC81B4DBEBF00848F14 /* nopic.gif in Resources */,
 				075FEB1C1B42BD6800CB6D39 /* Images.xcassets in Resources */,
-				07090DDE1B556FCA00848F14 /* menu.png in Resources */,
+				0787EF801B62841B00C9D8F1 /* nopic.gif in Resources */,
+				0787EF7A1B6283CE00C9D8F1 /* engine.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
