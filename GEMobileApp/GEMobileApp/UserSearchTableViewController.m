@@ -116,6 +116,7 @@
     
     cell.fullNameLabel.text = fullName;
     cell.universityLabel.text = [indexUser objectForKey:@"college"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     cell.profilePictureView.image = [UIImage imageNamed:@"nopic.gif"];
     PFFile *imageFile = [indexUser objectForKey:@"profilePicture"];

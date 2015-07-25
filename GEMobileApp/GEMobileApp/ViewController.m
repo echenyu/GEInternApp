@@ -57,17 +57,15 @@
     NSString *lastName = [self.userPF objectForKey:@"lastName"];
     NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@" %@", lastName]];
     self.profileName.text = fullName;
+
+    self.profilePic.image = [UIImage imageNamed:@"nopic.gif"];
+    PFFile *imageFile = [self.userPF objectForKey:@"profilePicture"];
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (data) {
+            self.profilePic.image = [UIImage imageWithData:data];
+        }
+    }];
     
-    UIImage *image = [UIImage imageNamed:@"nopic.gif"];
-    if(![[PFUser currentUser]objectForKey:@"profilePicture"]) {
-        self.profilePic.image = image;
-    } else {
-        [self.userPF[@"profilePicture"]getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            if(!error) {
-                self.profilePic.image = [UIImage imageWithData:data];
-            }
-        }];
-    }
     self.locationLabel.text = [self.userPF objectForKey:@"location"];
     self.programLabel.text = [self.userPF objectForKey:@"program"];
     self.majorLabel.text = [self.userPF objectForKey:@"major"];
