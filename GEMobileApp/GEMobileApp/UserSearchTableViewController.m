@@ -21,6 +21,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"cell"];
+    self.mySearchBar.delegate = self;
+    self.mySearchBar.returnKeyType = UIReturnKeyDone;
+    self.mySearchBar.enablesReturnKeyAutomatically = NO;
+    
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -37,7 +43,6 @@
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
     self.filteredResults = [NSMutableArray arrayWithCapacity:[self.allUsers count]];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,14 +63,31 @@
     }];
 }
 
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.mySearchBar resignFirstResponder];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
 }
 
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self.filteredResults removeAllObjects];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.firstName CONTAINS[c] %@", searchBar.text];
+    self.filteredResults = [NSMutableArray arrayWithArray:[self.allUsers filteredArrayUsingPredicate:predicate]];
+    
+    [self.tableView reloadData];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.allUsers.count;
+    if(self.mySearchBar.text.length > 0) {
+        return self.filteredResults.count;
+    } else {
+        return self.allUsers.count;
+    }
 }
 
 
@@ -73,9 +95,9 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     PFUser *indexUser;
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
+    
+    if(self.mySearchBar.text.length > 0) {
         indexUser = self.filteredResults[indexPath.row];
-
     } else {
         indexUser = self.allUsers[indexPath.row];
     }
@@ -92,15 +114,8 @@
     [self performSegueWithIdentifier:@"profileSegue"sender:self];
 }
 
--(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-    [self.filteredResults removeAllObjects];
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
-    self.filteredResults = [NSMutableArray arrayWithArray:[self.filteredResults filteredArrayUsingPredicate:predicate]];
-}
-
 #pragma mark - UISearchDisplayController Delegate Methods
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+/*-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
     // Tells the table data source to reload when text changes
     [self filterContentForSearchText:searchString scope:
      [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
@@ -114,40 +129,7 @@
      [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
     // Return YES to cause the search result table view to be reloaded.
     return YES;
-}
-    /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+}*/
 
 
 #pragma mark - Navigation
@@ -160,7 +142,12 @@
     // Pass the selected object to the new view controller.
     NSIndexPath *pathToUser = [self.tableView indexPathForSelectedRow];
     
-    PFUser *user = [self.allUsers objectAtIndex:pathToUser.row];
+    PFUser *user;
+    if(self.mySearchBar.text.length > 0) {
+        user = [self.filteredResults objectAtIndex:pathToUser.row];
+    } else {
+        user = [self.allUsers objectAtIndex:pathToUser.row];
+    }
     
     [[segue
       destinationViewController]setUserPF:user];

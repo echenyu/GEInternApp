@@ -602,13 +602,10 @@ In here, you can find maps to all the GE Aviation locations, first day onboardin
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="4WV-C3-ddV">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="FRf-bW-s9o">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="XxW-O4-kUx" id="ypk-ZU-DvG"/>
-                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="mu6-UR-7EV">
@@ -628,7 +625,7 @@ In here, you can find maps to all the GE Aviation locations, first day onboardin
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="nameSearch" destination="4WV-C3-ddV" id="YvZ-gm-P6R"/>
+                        <outlet property="mySearchBar" destination="FRf-bW-s9o" id="hWl-Wr-1Ln"/>
                         <outlet property="searchDisplayController" destination="hiN-0Y-r3g" id="v8f-t0-6dc"/>
                         <outlet property="sidebarButton" destination="oaH-fr-IwF" id="YC3-8w-kAw"/>
                         <segue destination="whR-cn-Dv4" kind="show" identifier="profileSegue" id="D8E-sq-4zz"/>
@@ -638,7 +635,6 @@ In here, you can find maps to all the GE Aviation locations, first day onboardin
                 <searchDisplayController id="hiN-0Y-r3g">
                     <connections>
                         <outlet property="delegate" destination="XxW-O4-kUx" id="zVB-7h-cv0"/>
-                        <outlet property="searchBar" destination="4WV-C3-ddV" id="HXK-zq-Kfb"/>
                         <outlet property="searchContentsController" destination="XxW-O4-kUx" id="Pt8-RV-pkb"/>
                         <outlet property="searchResultsDataSource" destination="XxW-O4-kUx" id="Tny-lu-aCz"/>
                         <outlet property="searchResultsDelegate" destination="XxW-O4-kUx" id="TxV-pc-6VX"/>
