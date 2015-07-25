@@ -478,7 +478,7 @@ In here, you can find maps to all the GE Aviation locations, first day onboardin
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ilz-1y-5JH">
                                 <rect key="frame" x="16" y="64" width="343" height="717.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">On this page, you will find basic information about the onboarding process. A few common frequently asked questions can be found in the FAQ section of this app.
+                                <string key="text">On this page, you will find basic information about the onboarding process. A few common frequently asked questions can be found in the FAQ section of this app.
 	
 	1. Onboarding process:
 		(i) Report to Building 800
@@ -509,7 +509,7 @@ In here, you can find maps to all the GE Aviation locations, first day onboardin
  		(ix) Compliance Training - 
      		(x) Benefits - 
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

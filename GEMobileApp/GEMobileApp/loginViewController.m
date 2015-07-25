@@ -43,6 +43,7 @@
     [self.createNew setTintColor:[UIColor whiteColor]];
     [self.login setTintColor: [UIColor whiteColor]];
     self.emailLabel.textColor = [UIColor whiteColor];
+    self.password.secureTextEntry = true;
     self.passwordLabel.textColor = [UIColor whiteColor];
     self.catchPhrase.textColor = [UIColor whiteColor];
     self.geLogo.image = [UIImage imageNamed:@"gelogo.png"];
