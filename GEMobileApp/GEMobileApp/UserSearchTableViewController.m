@@ -10,7 +10,7 @@
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
 #import "ViewController.h"
-
+#import "userTableViewCell.h"
 
 @interface UserSearchTableViewController ()
 
@@ -21,8 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UINib *nib = [UINib nibWithNibName:@"userTableViewCell"
+                                bundle:nil];
     [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"cell"];
+           forCellReuseIdentifier:@"userTableViewCell"];
+    [self.tableView registerNib:nib
+         forCellReuseIdentifier:@"userTableViewCell"];
+    
     self.mySearchBar.delegate = self;
     self.mySearchBar.returnKeyType = UIReturnKeyDone;
     self.mySearchBar.enablesReturnKeyAutomatically = NO;
@@ -75,8 +80,11 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [self.filteredResults removeAllObjects];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.firstName CONTAINS[c] %@", searchBar.text];
-    self.filteredResults = [NSMutableArray arrayWithArray:[self.allUsers filteredArrayUsingPredicate:predicate]];
+    NSPredicate *p1 = [NSPredicate predicateWithFormat:@"SELF.firstName CONTAINS[c] %@", searchBar.text];
+    NSPredicate *p2 = [NSPredicate predicateWithFormat:@"SELF.lastName CONTAINS[c] %@", searchBar.text];
+    self.filteredResults = [NSMutableArray arrayWithArray:[self.allUsers filteredArrayUsingPredicate:p1]];
+    [self.filteredResults addObjectsFromArray:[self.allUsers filteredArrayUsingPredicate:p2]];
+    [self.filteredResults setArray:[[NSSet setWithArray:self.filteredResults] allObjects]];
     
     [self.tableView reloadData];
 }
@@ -93,7 +101,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    userTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"userTableViewCell"];
     PFUser *indexUser;
     
     if(self.mySearchBar.text.length > 0) {
@@ -105,7 +113,17 @@
     NSString *firstName = [indexUser objectForKey:@"firstName"];
     NSString *lastName = [indexUser objectForKey:@"lastName"];
     NSString *fullName = [firstName stringByAppendingString:[NSString stringWithFormat:@" %@", lastName]];
-    cell.textLabel.text = fullName;
+    
+    cell.fullNameLabel.text = fullName;
+    cell.universityLabel.text = [indexUser objectForKey:@"college"];
+    
+    cell.profilePictureView.image = [UIImage imageNamed:@"nopic.gif"];
+    PFFile *imageFile = [indexUser objectForKey:@"profilePicture"];
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (data) {
+            cell.profilePictureView.image = [UIImage imageWithData:data];
+        }
+    }];
     
     return cell;
 }

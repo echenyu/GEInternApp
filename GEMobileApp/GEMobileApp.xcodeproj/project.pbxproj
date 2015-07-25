@@ -44,6 +44,8 @@
 		07F0F7E01B5FD80A006765C4 /* editProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F0F7DF1B5FD80A006765C4 /* editProfileViewController.m */; };
 		474F499822E5BB4E35C17AC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC745AD700080EC20A7A15E /* libPods.a */; };
 		669794611B42D2120004468B /* FaqViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 669794601B42D2120004468B /* FaqViewController.m */; };
+		F1554CBA1B642C0000DD627D /* userTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1554CB81B642C0000DD627D /* userTableViewCell.m */; };
+		F1554CBB1B642C0000DD627D /* userTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1554CB91B642C0000DD627D /* userTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,9 @@
 		669794601B42D2120004468B /* FaqViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaqViewController.m; sourceTree = "<group>"; };
 		83BF4A2A0943322DC3719564 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CEC745AD700080EC20A7A15E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1554CB71B642C0000DD627D /* userTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userTableViewCell.h; sourceTree = "<group>"; };
+		F1554CB81B642C0000DD627D /* userTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userTableViewCell.m; sourceTree = "<group>"; };
+		F1554CB91B642C0000DD627D /* userTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userTableViewCell.xib; sourceTree = "<group>"; };
 		F842511C027326676ADB3481 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,6 +252,9 @@
 				07F0F7DF1B5FD80A006765C4 /* editProfileViewController.m */,
 				075E8B4A1B5933AF00AA32A8 /* UserSearchTableViewController.h */,
 				075E8B4B1B5933AF00AA32A8 /* UserSearchTableViewController.m */,
+				F1554CB71B642C0000DD627D /* userTableViewCell.h */,
+				F1554CB81B642C0000DD627D /* userTableViewCell.m */,
+				F1554CB91B642C0000DD627D /* userTableViewCell.xib */,
 				075FEB3A1B42CA2500CB6D39 /* MapViewController.h */,
 				075FEB3B1B42CA2500CB6D39 /* MapViewController.m */,
 				6697945F1B42D2120004468B /* FaqViewController.h */,
@@ -371,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1554CBB1B642C0000DD627D /* userTableViewCell.xib in Resources */,
 				0787EF7C1B6283FD00C9D8F1 /* menu.png in Resources */,
 				075FEB1A1B42BD6800CB6D39 /* Main.storyboard in Resources */,
 				0787EF7E1B62840D00C9D8F1 /* gelogo.png in Resources */,
@@ -428,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1554CBA1B642C0000DD627D /* userTableViewCell.m in Sources */,
 				07D6F54B1B4C66A000D649E0 /* MapTableViewController.m in Sources */,
 				075FEB171B42BD6800CB6D39 /* ViewController.m in Sources */,
 				075FEB141B42BD6800CB6D39 /* AppDelegate.m in Sources */,
